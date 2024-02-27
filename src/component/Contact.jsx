@@ -12,7 +12,7 @@ export default function Contact() {
             <div className="p-10">
               <form
                 action="https://getform.io/f/kazRmOaJ"
-                target="black"
+                target="_blank"
                 method="POST"
               >
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-4">
