@@ -51,7 +51,7 @@ NavItem.propTypes = {
 
 const MobileMenu = ({ open }) => (
   <div
-    className={`fixed left-0 top-0 w-[60%] bg-[#202121] ease-in-out duration-500 ${
+    className={`fixed left-0 top-0 w-[60%] z-50 bg-[#202121] ease-in-out duration-500 ${
       open ? "h-full" : "left-[-100%]"
     }`}
   >
@@ -59,13 +59,13 @@ const MobileMenu = ({ open }) => (
     <div className="flex flex-col items-center pt-40 text-2xl">
       <ul className="text-center   ">
         <li className="py-8 ease-in-out duration-500  hover:scale-110 hover:after:content-['➜']">
-          <a href="#">HOME</a>
+          <a href="#HOME">HOME</a>
         </li>
         <li className="py-8 ease-in-out duration-500  hover:scale-110 hover:after:content-['➜'] ">
-          <a href="#">PROJECTS</a>
+          <a href="#PROJECTS">PROJECTS</a>
         </li>
         <li className="py-8 ease-in-out duration-500   hover:scale-110 hover:after:content-['➜'] ">
-          <a href="#">CONTACT</a>
+          <a href="#CONTACT">CONTACT</a>
         </li>
       </ul>
     </div>

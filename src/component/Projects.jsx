@@ -1,6 +1,6 @@
 export default function Projects() {
   return (
-    <div className="bg-[#111132] ">
+    <div className="bg-[#111132]  " id="PROJECTS">
       <div className=" w-4/6 mx-auto  p-5">
         <div className="pb-8 text-center">
           <p className="text-4xl  mb-3 font-bold primary-color">PROJECT</p>

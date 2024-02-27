@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 
 export default function Skills() {
   return (
-    <div className="bg-gradient-to-b from-[#0c0c1d] to-[#111132] h-screen flex flex-col items-center justify-center  text-white font-bold font-sans">
+    <div className="bg-gradient-to-b from-[#0c0c1d] to-[#111132] h-[110vh] sm:h-screen flex flex-col items-center justify-center text-white font-bold font-sans">
       <h1 className="text-center primary-color text-5xl pb-10 text-white">
         Skills
       </h1>
-      <div className="relative group  ">
+      <div className=" group relative ">
         <motion.div
           initial={{ x: 0, y: 0 }}
           animate={{
@@ -20,9 +20,9 @@ export default function Skills() {
               repeatType: "mirror",
             },
           }}
-          className="w-5/6 md:w-3/6 lg:w-2/6  m-auto  absolute -inset-1 bg-gradient-to-r from-green-600 to-purple-600 opacity-75 rounded-lg blur-lg group-hover:bg-opacity-100 transition duration-200"
+          className="w-5/6 md:w-3/6 lg:w-2/6 m-auto absolute -inset-1 bg-gradient-to-r from-green-600 to-purple-600 opacity-75  group-hover:bg-opacity-100 rounded-lg blur-lg transition duration-200"
         ></motion.div>
-        <div className=" relative w-5/6 md:w-3/6 lg:w-2/6 py-8 flex flex-wrap  items-center gap-7 md:gap-14 bg-slate-900  rounded-2xl justify-center m-auto  ">
+        <div className="relative w-5/6 md:w-3/6 lg:w-2/6 py-8 flex flex-wrap items-center gap-2 sm:gap-7 md:gap-14 bg-slate-900 rounded-2xl justify-center m-auto">
           <label className="flex gap-4 items-center border border-gray-400 rounded-full p-4 py-4 ">
             <img className="size-10" src="c-.png" alt="" />
             <span>c++</span>

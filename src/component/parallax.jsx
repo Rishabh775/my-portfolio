@@ -4,7 +4,7 @@ import { useWindowSize } from "@react-hook/window-size";
 
 export default function Parallax() {
   const [width] = useWindowSize();
-  const isMobile = width < 640;
+  const isMobile = width < 1024;
   const ref = useRef();
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -26,7 +26,7 @@ export default function Parallax() {
       </motion.h1>
 
       <motion.div
-        className="absolute inset-0 mountain  z-10"
+        className="absolute inset-0   z-10"
         style={{
           backgroundImage: `url(/mountains.png)`,
           backgroundSize: isMobile ? "contain" : "cover",

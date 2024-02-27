@@ -19,9 +19,10 @@ export default function Hero() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
       transition={{ type: "spring", stiffness: 40, damping: 20 }}
-      className="  relative font-DM Sans h-[90vh] overflow-clip bg-black snap-center"
+      className="  relative font-DM Sans h-[100vh] sm:h-[90vh] overflow-clip bg-black snap-center"
+      id="HOME"
     >
-      <div className="grid grid-cols-1  md:grid-cols-3 h-[80vh] gap-8 w-5/6 mx-auto">
+      <div className="grid grid-cols-1  lg:grid-cols-3 h-[80vh] gap-8 w-5/6 mx-auto">
         <div className="col-span-1 z-10 my-auto mx-auto">
           <div className="w-[300px] h-auto lg:w-[400px]">
             <img src="/hero.webp" alt=" hero img" />
@@ -29,7 +30,7 @@ export default function Hero() {
         </div>
 
         <div className="col-span-2  z-10 px-8 my-auto">
-          <h1 className="text-white leading-normal text-2xl lg:text-5xl font-extrabold">
+          <h1 className="text-white leading-normal text-2xl sm:text-3xl xl:text-5xl font-extrabold">
             <span className="primary-color leading-normal">
               Hey, I&apos;m Rishabh Singh
             </span>{" "}
