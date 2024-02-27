@@ -52,7 +52,9 @@ export default function Project() {
               ></div>
               <div className="absolute inset-0 z-10 flex justify-center items-center backdrop-blur-[2px] opacity-0 hover:opacity-100 ">
                 <a href={card.url} target="_blank">
-                  <p className=" p-8 text-6xl  uppercase  ">{card.name}</p>
+                  <p className=" p-8 text-2xl md:text-6xl  uppercase  ">
+                    {card.name}
+                  </p>
                 </a>
               </div>
             </div>
