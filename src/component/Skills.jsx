@@ -11,7 +11,7 @@ export default function Skills() {
             <span>c++</span>
           </label>
           <label className="flex gap-4 items-center   hover:shadow-indigo-950 shadow-md  bg-gray-800 rounded-full px-8 py-2 ">
-            <img className="size-10" src="html-5.webp" alt="" />
+            <img className="size-10" src="html-5.png" alt="" />
             <span>HTML</span>
           </label>
           <label className="flex gap-4 items-center  hover:shadow-indigo-950 shadow-md  bg-gray-800 rounded-full px-8 py-2 ">
