@@ -5,9 +5,36 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const MobileMenu = ({ open }) => (
+    <div
+      onClick={() => setOpen(false)}
+      className={`fixed left-0 top-0 w-[60%] z-50 bg-[#202121] ease-in-out duration-500 ${
+        open ? "h-full" : "left-[-100%]"
+      }`}
+    >
+      <h1 className="text-3xl primary-color m-4">RISHABH SINGH</h1>
+      <div className="flex flex-col items-center pt-40 text-2xl">
+        <ul className="text-center   ">
+          <li className="py-8 ease-in-out duration-500  hover:scale-110 hover:after:content-['➜']">
+            <a href="#HOME">HOME</a>
+          </li>
+          <li className="py-8 ease-in-out duration-500  hover:scale-110 hover:after:content-['➜'] ">
+            <a href="#PROJECTS">PROJECTS</a>
+          </li>
+          <li className="py-8 ease-in-out duration-500   hover:scale-110 hover:after:content-['➜'] ">
+            <a href="#CONTACT">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
 
   const toggleMenu = () => {
     setOpen(!open);
+  };
+
+  MobileMenu.propTypes = {
+    open: PropTypes.bool.isRequired,
   };
 
   return (
@@ -47,31 +74,4 @@ const NavItem = ({ title }) => (
 
 NavItem.propTypes = {
   title: PropTypes.string.isRequired,
-};
-
-const MobileMenu = ({ open }) => (
-  <div
-    className={`fixed left-0 top-0 w-[60%] z-50 bg-[#202121] ease-in-out duration-500 ${
-      open ? "h-full" : "left-[-100%]"
-    }`}
-  >
-    <h1 className="text-3xl primary-color m-4">RISHABH SINGH</h1>
-    <div className="flex flex-col items-center pt-40 text-2xl">
-      <ul className="text-center   ">
-        <li className="py-8 ease-in-out duration-500  hover:scale-110 hover:after:content-['➜']">
-          <a href="#HOME">HOME</a>
-        </li>
-        <li className="py-8 ease-in-out duration-500  hover:scale-110 hover:after:content-['➜'] ">
-          <a href="#PROJECTS">PROJECTS</a>
-        </li>
-        <li className="py-8 ease-in-out duration-500   hover:scale-110 hover:after:content-['➜'] ">
-          <a href="#CONTACT">CONTACT</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-);
-
-MobileMenu.propTypes = {
-  open: PropTypes.bool.isRequired,
 };
