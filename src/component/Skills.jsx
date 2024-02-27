@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-
 export default function Skills() {
   return (
     <div className="bg-gradient-to-b from-[#0c0c1d] to-[#111132] h-[110vh] sm:h-screen flex flex-col items-center justify-center text-white font-bold font-sans">
@@ -7,55 +5,40 @@ export default function Skills() {
         Skills
       </h1>
       <div className=" group relative ">
-        <motion.div
-          initial={{ x: 0, y: 0 }}
-          animate={{
-            x: [0, 60, -60, 0],
-            y: [0, 60, -60, 0],
-            transition: {
-              type: "spring",
-              stiffness: 50,
-              damping: 10,
-              repeat: Infinity,
-              repeatType: "mirror",
-            },
-          }}
-          className="w-5/6 md:w-3/6 lg:w-2/6 m-auto absolute -inset-1 bg-gradient-to-r from-green-600 to-purple-600 opacity-75  group-hover:bg-opacity-100 rounded-lg blur-lg transition duration-200"
-        ></motion.div>
-        <div className="relative w-5/6 md:w-3/6 lg:w-2/6 py-8 flex flex-wrap items-center gap-2 sm:gap-7 md:gap-14 bg-slate-900 rounded-2xl justify-center m-auto">
-          <label className="flex gap-4 items-center border border-gray-400 rounded-full p-4 py-4 ">
+        <div className="relative w-5/6  lg:w-4/6   py-8 flex flex-wrap items-center gap-2 sm:gap-7 md:gap-14 rounded-2xl justify-evenly m-auto">
+          <label className="flex gap-4 items-center hover:shadow-indigo-950 shadow-md  bg-gray-800 rounded-full px-8 py-2 ">
             <img className="size-10" src="c-.png" alt="" />
             <span>c++</span>
           </label>
-          <label className="flex gap-4 items-center border border-gray-400 rounded-full p-4 py-4 ">
+          <label className="flex gap-4 items-center   hover:shadow-indigo-950 shadow-md  bg-gray-800 rounded-full px-8 py-2 ">
             <img className="size-10" src="html-5.webp" alt="" />
             <span>HTML</span>
           </label>
-          <label className="flex gap-4 items-center border  border-gray-400 rounded-full p-4 py-4 ">
+          <label className="flex gap-4 items-center  hover:shadow-indigo-950 shadow-md  bg-gray-800 rounded-full px-8 py-2 ">
             <img className="size-10" src="css.webp" alt="" />
             <span>CSS</span>
           </label>
-          <label className="flex gap-4 items-center border  border-gray-400 rounded-full p-4 py-4 ">
+          <label className="flex gap-4 items-center  hover:shadow-indigo-950 shadow-md  bg-gray-800 rounded-full px-8 py-2 ">
             <img className="size-10" src="js.webp" alt="" />
             <span>JAVASCRIPT</span>
           </label>
-          <label className="flex gap-4 items-center border  border-gray-400 rounded-full p-4 py-4 ">
+          <label className="flex gap-4 items-center  hover:shadow-indigo-950 shadow-md  bg-gray-800 rounded-full px-8 py-2 ">
             <img className="size-10" src="typescript.png" alt="" />
             <span>TYPESCRIPT</span>
           </label>
-          <label className="flex gap-4 items-center border  border-gray-400 rounded-full p-4 py-4 ">
+          <label className="flex gap-4 items-center  hover:shadow-indigo-950 shadow-md   bg-gray-800 rounded-full px-8 py-2 ">
             <img className="size-10" src="React.webp" alt="" />
             <span>REACT</span>
           </label>
-          <label className="flex gap-4 items-center border  border-gray-400 rounded-full p-4 py-4 ">
+          <label className="flex gap-4 items-center   hover:shadow-indigo-950 shadow-md  bg-gray-800 rounded-full px-8 py-2 ">
             <img className="size-10" src="next.jpg" alt="" />
             <span>NEXT</span>
           </label>
-          <label className="flex gap-4 items-center border border-gray-400 rounded-full p-4 py-4 ">
+          <label className="flex gap-4 items-center  hover:shadow-indigo-950 shadow-md  bg-gray-800 rounded-full px-8 py-2 ">
             <img className="size-10" src="prisma.svg" alt="" />
             <span>PRISMA</span>
           </label>
-          <label className="flex gap-4 items-center border  border-gray-400 rounded-full p-4 py-4 ">
+          <label className="flex gap-4 items-center  hover:shadow-indigo-950 shadow-md   bg-gray-800 rounded-full px-8 py-2 ">
             <img className="size-10" src="mongo.webp" alt="" />
             <span>MONGODB</span>
           </label>

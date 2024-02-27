@@ -8,7 +8,7 @@ export default function Contact() {
           </h2>
         </div>
         <div className="w-full md:w-4/6  mx-auto">
-          <div className="mt-6 bg-[#161616] rounded-xl">
+          <div className="mt-6 bg-[#ffffff09] rounded-xl">
             <div className="p-10">
               <form
                 action="https://getform.io/f/kazRmOaJ"
@@ -23,7 +23,7 @@ export default function Contact() {
                         name="name "
                         id=""
                         placeholder="Your Name"
-                        className="bg-[#161616] w-full px-4 py-5 text-gray-400 placeholder-gray-400 border border-gray-700 rounded-md focus:outline-none focus:border-pink-600 "
+                        className="bg-[#0c0c2d] w-full px-4 py-5 text-gray-400 placeholder-gray-400 border border-gray-700 rounded-md focus:outline-none focus:border-pink-600 "
                       />
                     </div>
                   </div>
@@ -34,7 +34,7 @@ export default function Contact() {
                         name="email "
                         id=""
                         placeholder="Your Email"
-                        className="bg-[#161616] w-full px-4 py-5 text-gray-400 placeholder-gray-400 border border-gray-700 rounded-md focus:outline-none focus:border-pink-600 "
+                        className="bg-[#0c0c2d] w-full px-4 py-5 text-gray-400 placeholder-gray-400 border border-gray-700 rounded-md focus:outline-none focus:border-pink-600 "
                       />
                     </div>
                   </div>
@@ -44,7 +44,7 @@ export default function Contact() {
                         name=" Message "
                         id=""
                         placeholder="Your Message"
-                        className="bg-[#161616] w-full px-4 py-5 text-gray-400 placeholder-gray-400 border border-gray-700 rounded-md focus:outline-none focus:border-pink-600 "
+                        className="bg-[#0c0c2d] w-full px-4 py-5 text-gray-400 placeholder-gray-400 border border-gray-700 rounded-md focus:outline-none focus:border-pink-600 "
                       />
                     </div>
                   </div>

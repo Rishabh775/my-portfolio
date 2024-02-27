@@ -12,7 +12,7 @@ export default function Navbar() {
         open ? "h-full" : "left-[-100%]"
       }`}
     >
-      <h1 className="text-3xl primary-color m-4">RISHABH SINGH</h1>
+      <h1 className="text-3xl  m-4">RISHABH SINGH</h1>
       <div className="flex flex-col items-center pt-40 text-2xl">
         <ul className="text-center   ">
           <li className="py-8 ease-in-out duration-500  hover:scale-110 hover:after:content-['➜']">
@@ -45,7 +45,7 @@ export default function Navbar() {
         transition={{ type: "spring", stiffness: 40, damping: 20 }}
         className="w-4/6 m-auto h-full flex items-center justify-between"
       >
-        <div className=" primary-color text-xl lg:text-2xl font-bold cursor-pointer">
+        <div className="  text-xl lg:text-2xl font-bold cursor-pointer">
           RISHABH SINGH
         </div>
         <motion.div

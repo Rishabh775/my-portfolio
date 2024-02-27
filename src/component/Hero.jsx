@@ -31,9 +31,7 @@ export default function Hero() {
 
         <div className="col-span-2  z-10 px-8 my-auto">
           <h1 className="text-white leading-normal text-2xl sm:text-3xl xl:text-5xl font-extrabold">
-            <span className="primary-color leading-normal">
-              Hey, I&apos;m Rishabh Singh
-            </span>{" "}
+            <span className=" leading-normal">Hey, I&apos;m Rishabh Singh</span>{" "}
             <br />
             <span className="primary-color">Web developer</span> <br />
           </h1>
@@ -58,16 +56,6 @@ export default function Hero() {
               </button>
             </a>
             <div className="flex gap-3 items-center py-4 ">
-              <a
-                target="_blank"
-                href="https://www.instagram.com/rishabh_797604/"
-              >
-                <img
-                  className="w-6 cursor-pointer hover:scale-110"
-                  src="/instagram.png"
-                  alt="instagram"
-                />
-              </a>
               <a target="_blank" href="https://github.com/Rishabh775">
                 <img
                   className="w-8 cursor-pointer hover:scale-110"
