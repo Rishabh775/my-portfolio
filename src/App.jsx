@@ -9,7 +9,7 @@ import Parallax from "./component/parallax";
 
 export default function App() {
   return (
-    <div className=" scroll-smooth  ">
+    <div className=" scroll-smooth bg-black ">
       <Cursor />
       <Navbar />
       <Hero />
