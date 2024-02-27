@@ -48,12 +48,12 @@ export default function Hero() {
               target="_blank"
               rel="noreferrer"
             >
-              <button className=" px-6 py-3 rounded-xl mr-4  mb-1 bg-gradient-to-br from-orange-500 to-pink-500 text-white hover:text-lg duration-500  hover:after:content-['➜'] hover:scale-105">
+              <button className=" px-6 py-3 rounded-xl mr-4  mb-1 bg-gradient-to-br from-orange-500 to-pink-500 text-white hover:text-lg duration-200  hover:after:content-['➜'] hover:scale-105">
                 Resume
               </button>
             </a>
-            <a href="#Contact">
-              <button className="px-6 py-3 rounded-xl mr-4 border border-gray-400 hover:bg-gradient-to-br from-orange-500 to-pink-500 text-white hover:border-none hover:text-lg duration-500 hover:scale-110">
+            <a href="#CONTACT">
+              <button className="px-6 py-3 rounded-xl mr-4  border border-gray-400 hover:bg-gradient-to-br from-orange-500 to-pink-500 text-white hover:border-none hover:text-lg duration-200 hover:scale-110">
                 Contact
               </button>
             </a>
