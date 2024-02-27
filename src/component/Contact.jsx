@@ -1,9 +1,9 @@
 export default function Contact() {
   return (
     <div className="bg-gradient-to-b from-[#111132] to-[#0c0c1d]" id="CONTACT">
-      <div className=" w-5/6 mx-auto sm:py-20 p-5 font-sans">
+      <div className=" w-5/6 mx-auto sm:py-20  p-5 font-sans">
         <div className="text-center">
-          <h2 className="text-4xl font-bold leading-tight primary-color">
+          <h2 className="text-4xl font-bold pb-5 leading-tight primary-color">
             Contact Me
           </h2>
         </div>

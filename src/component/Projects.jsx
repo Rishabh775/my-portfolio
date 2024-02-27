@@ -3,7 +3,7 @@ export default function Projects() {
     <div className="bg-[#111132]  " id="PROJECTS">
       <div className=" w-4/6 mx-auto  p-5">
         <div className="pb-8 text-center">
-          <p className="text-4xl  mb-3 font-bold primary-color">PROJECT</p>
+          <p className="text-4xl  mb-3 font-bold primary-color">Projects</p>
         </div>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
           <div className="transform transition-transform duration-300 hover:scale-105 overflow-hidden shadow-lg shadow-[#040c16] container rounded-md flex justify-center items-center  h-[200px] bg-cover  group relative">
