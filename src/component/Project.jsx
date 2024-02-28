@@ -1,22 +1,29 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
+// import { useWindowSize } from "@react-hook/window-size";
 
 export default function Project() {
+  // const [width] = useWindowSize();
+  // const isMobile = width < 640;
   const cards = [
-    {
-      image: "/visitto.png",
-      name: "Visitto",
-      url: "https://visitto.netlify.app/",
-    },
     {
       image: "/oxyzon.png",
       name: "Oxyzon",
       url: "https://next-js-ecommerce-omega.vercel.app/",
+      description: " E-commerce website",
     },
+    {
+      image: "/visitto.png",
+      name: "Visitto",
+      url: "https://visitto.netlify.app/",
+      description: "Landing page for a travel agency",
+    },
+
     {
       image: "/todo.png",
       name: "Todo",
       url: "https://react-mytodo.vercel.app/",
+      description: " A simple todo app",
     },
   ];
   const targetRef = useRef(null);
@@ -40,20 +47,28 @@ export default function Project() {
           {cards.map((card, index) => (
             <div
               key={index}
-              className="group relative max-sm:w-[320px] max-sm:h-[300px] sm:w-[600px] sm:h-[400px]  lg:w-[1024px]  lg:h-[600px]  overflow-hidden bg-neutral-200"
+              className="group relative max-sm:w-[320px] max-sm:h-[300px] sm:w-[600px] sm:h-[400px] rounded-2xl   lg:w-[1024px]  lg:h-[624px]  overflow-hidden"
             >
               <div
                 className="absolute  inset-0 z-0 "
                 style={{
                   backgroundImage: `url(${card.image})`,
                   backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                 }}
               ></div>
-              <div className="absolute inset-0 z-10 flex justify-center items-center backdrop-blur-[2px] opacity-0 hover:opacity-100 ">
-                <a href={card.url} target="_blank">
-                  <p className=" p-8 text-2xl md:text-6xl  uppercase  ">
+              <div className="absolute inset-0  flex flex-wrap  justify-center items-center  opacity-0 hover:opacity-100 text-black duration-500 backdrop-blur-[3px] ">
+                <a
+                  href={card.url}
+                  target="_blank"
+                  className="flex flex-wrap  flex-col justify-center items-center"
+                >
+                  <p className=" py-4 text-2xl md:text-6xl  uppercase  ">
                     {card.name}
+                  </p>
+                  <p className="font-sans mx-auto text-xl md:text-3xl ">
+                    {card.description}
                   </p>
                 </a>
               </div>

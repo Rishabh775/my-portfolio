@@ -48,14 +48,30 @@ export default function Navbar() {
         <div className="  text-xl lg:text-2xl font-bold cursor-pointer">
           RISHABH SINGH
         </div>
-        <motion.div
-          transition={{ staggerChildren: 0.1 }}
-          className="hidden lg:flex gap-8"
-        >
+        <div className="hidden lg:flex lg:items-center gap-8">
           <NavItem title="HOME" />
           <NavItem title="PROJECTS" />
           <NavItem title="CONTACT" />
-        </motion.div>
+          <div className="flex flex-wrap gap-3 items-center ">
+            <a target="_blank" href="https://github.com/Rishabh775">
+              <img
+                className="w-8 cursor-pointer hover:scale-110"
+                src="/github.png"
+                alt="github"
+              />
+            </a>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/rishabh-singh-794171205/"
+            >
+              <img
+                className="w-9  cursor-pointer hover:scale-110"
+                src="/linkedin.png"
+                alt="linkedin"
+              />
+            </a>
+          </div>
+        </div>
 
         <div onClick={toggleMenu} className="block lg:hidden">
           {open ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}

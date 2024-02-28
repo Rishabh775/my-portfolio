@@ -55,25 +55,6 @@ export default function Hero() {
                 Contact
               </button>
             </a>
-            <div className="flex gap-3 items-center py-4 ">
-              <a target="_blank" href="https://github.com/Rishabh775">
-                <img
-                  className="w-8 cursor-pointer hover:scale-110"
-                  src="/github.png"
-                  alt="github"
-                />
-              </a>
-              <a
-                target="_blank"
-                href="https://www.linkedin.com/in/rishabh-singh-794171205/"
-              >
-                <img
-                  className="w-9 cursor-pointer hover:scale-110"
-                  src="/linkedin.png"
-                  alt="linkedin"
-                />
-              </a>
-            </div>
           </div>
         </div>
         <motion.div
