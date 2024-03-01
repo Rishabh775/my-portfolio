@@ -6,7 +6,7 @@ export default function Hero() {
       x: 0,
     },
     animate: {
-      x: "-220%",
+      x: "-300%",
       transition: {
         repeat: Infinity,
         repeatType: "mirror",

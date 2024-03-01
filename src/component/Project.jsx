@@ -58,7 +58,7 @@ export default function Project() {
                   backgroundPosition: "center",
                 }}
               ></div>
-              <div className="absolute inset-0  flex flex-wrap  justify-center items-center  opacity-0 hover:opacity-100 text-black duration-500 backdrop-blur-[3px] ">
+              <div className="absolute inset-0 font-bold flex flex-wrap  justify-center items-center  opacity-0 hover:opacity-100 text-black duration-500 backdrop-blur-md ">
                 <a
                   href={card.url}
                   target="_blank"
