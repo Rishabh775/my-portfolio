@@ -29,7 +29,7 @@ export default function Skills() {
     <div className="bg-gradient-to-b from-[#0c0c1d] to-[#111132] text-white font-bold font-sans">
       <div className="h-[60vh] hidden overflow-hidden sm:flex flex-col items-center justify-center ">
         <h1 className="primary-color text-5xl pb-10">Skills</h1>
-        <div className=" py-10 marquee sm:flex w-5/6 mx-auto whitespace-nowrap gap-x-10 ">
+        <div className=" py-10 marquee sm:flex xl:w-5/6 md:w-full mx-auto whitespace-nowrap gap-x-10 ">
           <div>
             <motion.div
               className="inline-block  "
