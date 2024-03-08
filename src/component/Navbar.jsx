@@ -83,7 +83,7 @@ export default function Navbar() {
 }
 
 const NavItem = ({ title }) => (
-  <a href={`#${title}`} className="hover:scale-125 duration-500 ease-in-out">
+  <a href={`#${title}`} className="hover:scale-125 duration-200 ease-in-out">
     <button>{title}</button>
   </a>
 );

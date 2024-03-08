@@ -5,6 +5,10 @@
 .primary-color {
   @apply text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-pink-500 inline-block;
 }
+
+.marquee {
+  mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+}
 .cursor {
   width: 50px;
   height: 50px;

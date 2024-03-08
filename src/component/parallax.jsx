@@ -12,11 +12,11 @@ export default function Parallax() {
   });
 
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
-  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "500%"]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "650%"]);
   return (
     <div
       ref={ref}
-      className="w-full h-[110vh]  overflow-hidden relative flex items-center justify-center  bg-gradient-to-b from-[#111132] to-[#0c0c1d] snap-center"
+      className="w-full sm:h-[110vh]  h-[80vh] overflow-hidden relative flex items-center justify-center  bg-gradient-to-b from-[#111132] to-[#0c0c1d] snap-center"
     >
       <motion.h1
         style={{ y: textY }}
@@ -49,7 +49,7 @@ export default function Parallax() {
           backgroundImage: `url(/stars.png)`,
           backgroundSize: "cover",
           backgroundPosition: "bottom",
-          x: backgroundY,
+          y: backgroundY,
         }}
       ></motion.div>
     </div>

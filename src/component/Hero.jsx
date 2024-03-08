@@ -10,7 +10,7 @@ export default function Hero() {
       transition: {
         repeat: Infinity,
         repeatType: "mirror",
-        duration: 20,
+        duration: 25,
       },
     },
   };
@@ -37,21 +37,21 @@ export default function Hero() {
           </h1>
           <p className="text-white sm:text-lg my-6 lg:text-xl">
             I am a web developer with a passion for creating beautiful and
-            user-friendly websites.Passionate to learn fullStack development. I
+            user-friendly websites. Passionate to learn fullStack development. I
             love to work with React, Next.js, and Tailwind CSS.
           </p>
-          <div>
+          <div className="max-sm:flex max-sm:flex-col sm: max-sm:justify-center  flex gap-x-4 gap-y-2 sm:items-center ">
             <a
               href="https://drive.google.com/file/d/1IDNsp5wf3GKi4YVNFazizg5LnrgBbI-g/view?usp=drive_link"
               target="_blank"
               rel="noreferrer"
             >
-              <button className=" px-6 py-3 rounded-xl mr-4  mb-1 bg-gradient-to-br from-orange-500 to-pink-500 text-white hover:text-lg duration-200  hover:after:content-['➜'] hover:scale-105">
+              <button className=" px-6 py-3 rounded-xl  bg-gradient-to-br from-orange-500 to-pink-500 text-white hover:text-lg duration-100  hover:after:content-['➜'] ">
                 Resume
               </button>
             </a>
             <a href="#CONTACT">
-              <button className="px-6 py-3 rounded-xl mr-4  border border-gray-400 hover:bg-gradient-to-br from-orange-500 to-pink-500 text-white hover:border-none hover:text-lg duration-200 hover:scale-110">
+              <button className="px-6 py-3 rounded-xl border border-gray-400 hover:bg-gradient-to-br from-orange-500 to-pink-500 text-white hover:border-none hover:text-lg duration-100 ">
                 Contact
               </button>
             </a>
