@@ -71,10 +71,10 @@ export default function Skills() {
           </motion.div>
         </div>
       </div>
-      <div className="h-[110vh] sm:hidden flex flex-col items-center justify-center m-auto">
+      <div className="h-[110vh] sm:hidden flex flex-col items-center justify-center ">
         <h1 className="primary-color text-5xl pb-10">Skills</h1>
 
-        <div className="w-5/6 lg:w-4/6 py-4 flex flex-wrap items-center gap-4  justify-evenly ">
+        <div className="  py-4 flex flex-wrap items-center gap-4  justify-evenly ">
           {skills.map((skill, index) => (
             <label
               key={index}

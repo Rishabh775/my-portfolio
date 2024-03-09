@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <div className="bg-black ">
-      <div className="p-12 w-5/6 flex flex-wrap justify-between mx-auto">
+      <div className="p-12 sm:w-5/6 flex max-sm:flex-col max-sm:items-center max-sm:gap-y-2 flex-wrap justify-between mx-auto">
         <span className="text-gray-300">Copyright © Rishabh Singh 2024</span>
         <div className="flex flex-wrap gap-3 items-center ">
           <a target="_blank" href="https://github.com/Rishabh775">

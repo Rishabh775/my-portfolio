@@ -38,12 +38,12 @@ export default function Navbar() {
   };
 
   return (
-    <div className="bg-black h-28  text-gray-100 font-DM Sans w-full">
+    <div className="bg-black h-24 sm:h-28  text-gray-100 font-DM Sans w-full">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ type: "spring", stiffness: 40, damping: 20 }}
-        className="w-4/6 m-auto h-full flex items-center justify-between"
+        className="sm:w-4/6 max-sm:px-4 m-auto h-full flex items-center justify-between"
       >
         <div className="  text-xl lg:text-2xl font-bold cursor-pointer">
           RISHABH SINGH
