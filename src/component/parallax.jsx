@@ -16,7 +16,7 @@ export default function Parallax() {
   return (
     <div
       ref={ref}
-      className="w-full sm:h-[110vh]  h-[80vh] overflow-hidden relative flex items-center justify-center  bg-gradient-to-b from-[#111132] to-[#0c0c1d] snap-center"
+      className="w-full sm:h-[110vh]  h-[100vh] overflow-hidden relative flex items-center justify-center  bg-gradient-to-b from-[#111132] to-[#0c0c1d] snap-center"
     >
       <motion.h1
         style={{ y: textY }}
