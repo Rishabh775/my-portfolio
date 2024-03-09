@@ -22,7 +22,7 @@ export default function Hero() {
       className="  relative font-DM Sans h-[110vh] sm:h-[90vh] overflow-clip bg-black snap-center"
       id="HOME"
     >
-      <div className="grid grid-cols-1  lg:grid-cols-3 h-[80vh] gap-8 w-5/6 mx-auto">
+      <div className="grid grid-cols-1  lg:grid-cols-3 h-[80vh] gap-8 sm:w-5/6 mx-auto">
         <div className="col-span-1 z-10 my-auto mx-auto">
           <div className="w-[300px] h-auto xl:w-[400px]">
             <img src="/hero.webp" alt=" hero img" />
