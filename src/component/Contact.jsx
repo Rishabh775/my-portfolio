@@ -1,14 +1,25 @@
+import { motion } from "framer-motion";
+import { useRef } from "react";
 export default function Contact() {
+  const constraintsRef = useRef(null);
   return (
-    <div className="bg-gradient-to-b from-[#111132] to-[#0c0c1d]" id="CONTACT">
+    <motion.div
+      ref={constraintsRef}
+      className="bg-gradient-to-b from-[#0c0c1d] h-[80vh] to-black"
+      id="CONTACT"
+    >
       <div className=" sm:w-5/6 mx-auto sm:py-20  p-5 font-sans">
-        <div className="text-center">
-          <h2 className="text-4xl font-bold pb-5 leading-tight primary-color">
-            Contact Me
-          </h2>
-        </div>
-        <div className=" md:w-4/6  mx-auto">
-          <div className="mt-6 bg-[#ffffff09] rounded-xl">
+        <div className=" md:w-3/6  mx-auto">
+          <motion.div
+            drag
+            dragConstraints={constraintsRef}
+            className="mt-6  bg-neutral-900 rounded-xl"
+          >
+            <div className="text-center">
+              <h2 className="text-4xl font-bold pt-5 leading-tight primary-color">
+                Contact Me
+              </h2>
+            </div>
             <div className="p-10">
               <form
                 action="https://getform.io/f/kazRmOaJ"
@@ -23,7 +34,7 @@ export default function Contact() {
                         name="name "
                         id=""
                         placeholder="Your Name"
-                        className="bg-[#0c0c2d] w-full px-4 py-5 text-gray-400 placeholder-gray-400 border border-gray-700 rounded-md focus:outline-none focus:border-pink-600 "
+                        className="bg-neutral-800 w-full px-4 py-5 text-gray-400 placeholder-gray-400 border border-gray-700 rounded-md focus:outline-none focus:border-pink-600 "
                       />
                     </div>
                   </div>
@@ -34,7 +45,7 @@ export default function Contact() {
                         name="email "
                         id=""
                         placeholder="Your Email"
-                        className="bg-[#0c0c2d] w-full px-4 py-5 text-gray-400 placeholder-gray-400 border border-gray-700 rounded-md focus:outline-none focus:border-pink-600 "
+                        className="bg-neutral-800 w-full px-4 py-5 text-gray-400 placeholder-gray-400 border border-gray-700 rounded-md focus:outline-none focus:border-pink-600 "
                       />
                     </div>
                   </div>
@@ -44,14 +55,14 @@ export default function Contact() {
                         name=" Message "
                         id=""
                         placeholder="Your Message"
-                        className="bg-[#0c0c2d] w-full px-4 py-5 text-gray-400 placeholder-gray-400 border border-gray-700 rounded-md focus:outline-none focus:border-pink-600 "
+                        className="bg-neutral-800 w-full px-4 py-10 text-gray-400 placeholder-gray-400 border border-gray-700 rounded-md focus:outline-none focus:border-pink-600 "
                       />
                     </div>
                   </div>
                   <div className="sm:col-span-2 ">
                     <button
                       type="submit"
-                      className="text-xl bg-gradient-to-br from-orange-400 to-pink-600 w-full p-4  mt-2 font-semibold text-white  rounded-md"
+                      className="text-xl bg-gradient-to-br from-orange-400 to-pink-600 w-full mx-auto  p-4  mt-2 font-semibold text-white  rounded-md"
                     >
                       Send
                     </button>
@@ -59,9 +70,9 @@ export default function Contact() {
                 </div>
               </form>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

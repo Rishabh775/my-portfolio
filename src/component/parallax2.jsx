@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { useWindowSize } from "@react-hook/window-size";
 
-export default function Parallax() {
+export default function Parallax2() {
   const [width] = useWindowSize();
   const isMobile = width < 1024;
   const ref = useRef();
@@ -16,13 +16,13 @@ export default function Parallax() {
   return (
     <div
       ref={ref}
-      className="w-full sm:h-[110vh]  h-[100vh] overflow-hidden relative flex items-center justify-center  bg-gradient-to-b from-[#111132] to-[#0c0c1d] snap-center"
+      className="w-full sm:h-[110vh]  h-[100vh] overflow-hidden relative flex items-center justify-center   bg-gradient-to-b from-[#0c0c1d] to-[#111132] snap-center"
     >
       <motion.h1
         style={{ y: textY }}
         className="font-bold text-white text-4xl md:text-7xl relative z-20"
       >
-        MY TechStack
+        MY PROJECTS
       </motion.h1>
 
       <motion.div
@@ -37,7 +37,7 @@ export default function Parallax() {
       <motion.div
         className="absolute  inset-0 z-0"
         style={{
-          backgroundImage: `url(/sun.png)`,
+          backgroundImage: `url(/planets.png)`,
           backgroundSize: "cover",
           backgroundPosition: "bottom",
           y: backgroundY,

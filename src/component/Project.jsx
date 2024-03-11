@@ -36,14 +36,11 @@ export default function Project() {
   return (
     <section
       ref={targetRef}
-      className="relative max-sm:h-[300vh] h-[320vh] bg-[#111132]"
+      className="relative overflow-hidden max-sm:h-[300vh] h-[320vh] bg-gradient-to-b from-[#111132] to-[#0c0c1d]"
       id="PROJECTS"
     >
-      <div className=" text-center">
-        <p className="text-5xl mt-10 pb-10 font-bold primary-color">Projects</p>
-      </div>
       <div className="sticky  top-0 flex h-screen items-center  overflow-hidden">
-        <motion.div style={{ x }} className="flex gap-48">
+        <motion.div style={{ x }} className="flex gap-x-16 sm:gap-x-48">
           {cards.map((card, index) => (
             <div
               key={index}

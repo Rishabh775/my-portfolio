@@ -38,7 +38,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="bg-black h-24 sm:h-28  text-gray-100 font-DM Sans w-full">
+    <div className="bg-gradient-to-b from-black to-neutral-950 h-24 sm:h-28  text-gray-100 font-DM Sans w-full">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
