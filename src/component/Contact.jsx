@@ -1,3 +1,4 @@
+import { FaArrowDownLong } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 export default function Contact() {
@@ -8,6 +9,13 @@ export default function Contact() {
       className="bg-gradient-to-b from-[#0c0c1d] h-[80vh] to-black"
       id="CONTACT"
     >
+      <div className=" hidden sm:block text-white text-xl font-medium cursor-default">
+        <div className=" flex flex-col justify-center items-center ">
+          Drag Me{" "}
+          <FaArrowDownLong className="animate-bounce my-2 sm:scale-110" />
+        </div>
+      </div>
+
       <div className=" sm:w-5/6 mx-auto sm:py-20  p-5 font-sans">
         <div className=" md:w-3/6  mx-auto">
           <motion.div

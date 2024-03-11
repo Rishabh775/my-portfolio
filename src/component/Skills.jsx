@@ -56,7 +56,7 @@ export default function Skills() {
                 {skills.map((skill, index) => (
                   <div
                     key={index}
-                    className="flex gap-4 items-center justify-start hover:shadow-indigo-950 shadow-md bg-gray-800 rounded-3xl py-4 w-64 px-6"
+                    className="flex gap-4 items-center justify-start hover:shadow-indigo-950 hover:scale-105  shadow-md bg-gray-800 rounded-3xl py-4 w-64 px-6"
                   >
                     <img className="size-16" src={skill.img} alt={skill.name} />
                     <span className="text-xl">{skill.name}</span>
@@ -76,7 +76,7 @@ export default function Skills() {
               {skills.map((skill, index) => (
                 <div
                   key={index}
-                  className="flex gap-4 justify-start items-center hover:shadow-indigo-950 shadow-md bg-gray-800 rounded-3xl py-4 w-64 px-6"
+                  className="flex gap-4 justify-start items-center hover:shadow-indigo-950 hover:scale-105  shadow-md bg-gray-800 rounded-3xl py-4 w-64 px-6"
                 >
                   <img className="size-16" src={skill.img} alt={skill.name} />
                   <span className="text-xl">{skill.name}</span>
@@ -98,7 +98,7 @@ export default function Skills() {
                 {skills.map((skill, index) => (
                   <div
                     key={index}
-                    className="flex gap-4 items-center justify-start hover:shadow-indigo-950 shadow-md bg-gray-800 rounded-3xl py-4 w-64 px-6"
+                    className="flex gap-4 items-center justify-start hover:shadow-indigo-950 hover:scale-105  shadow-md bg-gray-800 rounded-3xl py-4 w-64 px-6"
                   >
                     <img className="size-16" src={skill.img} alt={skill.name} />
                     <span className="text-xl">{skill.name}</span>
@@ -118,7 +118,7 @@ export default function Skills() {
               {skills.map((skill, index) => (
                 <div
                   key={index}
-                  className="flex gap-4 justify-start items-center hover:shadow-indigo-950 shadow-md bg-gray-800 rounded-3xl py-4 w-64 px-6"
+                  className="flex gap-4 justify-start items-center hover:shadow-indigo-950 hover:scale-105  shadow-md bg-gray-800 rounded-3xl py-4 w-64 px-6"
                 >
                   <img className="size-16" src={skill.img} alt={skill.name} />
                   <span className="text-xl">{skill.name}</span>
