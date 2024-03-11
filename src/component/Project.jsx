@@ -36,7 +36,7 @@ export default function Project() {
   return (
     <section
       ref={targetRef}
-      className="relative overflow-hidden max-sm:h-[300vh] h-[320vh] bg-gradient-to-b from-[#111132] to-[#0c0c1d]"
+      className="relative  max-sm:h-[300vh] h-[320vh] bg-gradient-to-b from-[#111132] to-[#0c0c1d]"
       id="PROJECTS"
     >
       <div className="sticky  top-0 flex h-screen items-center  overflow-hidden">
