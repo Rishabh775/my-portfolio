@@ -13,17 +13,16 @@ export default function Project() {
       description: " E-commerce website",
     },
     {
+      image: "/Loop.png",
+      name: "Loop",
+      url: "https://loop-sepia.vercel.app/",
+      description: "A new music streaming platform",
+    },
+    {
       image: "/visitto.png",
       name: "Visitto",
       url: "https://visitto.netlify.app/",
       description: "Landing page for a travel agency",
-    },
-
-    {
-      image: "/todo.png",
-      name: "Todo",
-      url: "https://react-mytodo.vercel.app/",
-      description: " A simple todo app",
     },
   ];
   const targetRef = useRef(null);
