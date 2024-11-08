@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Resume } from "../Constant/ResumeLink";
 
 export default function Hero() {
   const sliderVariants = {
@@ -41,11 +42,7 @@ export default function Hero() {
             love to work with React, Next.js, and Tailwind CSS.
           </p>
           <div className="max-sm:flex max-sm:flex-col sm: max-sm:justify-center  flex gap-x-4 gap-y-2 sm:items-center ">
-            <a
-              href="https://drive.google.com/file/d/1IDNsp5wf3GKi4YVNFazizg5LnrgBbI-g/view?usp=drive_link"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href={Resume.link} target="_blank" rel="noreferrer">
               <button className=" px-6 py-3 rounded-xl  bg-gradient-to-br from-orange-500 to-pink-500 text-white hover:text-lg duration-100  hover:after:content-['➜'] ">
                 Resume
               </button>
