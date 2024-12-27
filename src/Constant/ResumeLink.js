@@ -1,3 +1,3 @@
 export const Resume = {
-  link: "https://drive.google.com/file/d/1TEk2g2oM2kgjxsZMjm8bVuO4CiUbjFDI/view?usp=drive_link",
+  link: "https://drive.google.com/file/d/1mqEx0ezn-O1cfPgvdgPwD5gGXHT5iysO/view?usp=drive_link",
 };
