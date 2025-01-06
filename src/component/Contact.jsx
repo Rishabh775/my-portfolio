@@ -42,6 +42,7 @@ export default function Contact() {
                         name="name "
                         id=""
                         placeholder="Your Name"
+                        required
                         className="bg-neutral-800 w-full px-4 py-5 text-gray-400 placeholder-gray-400 border border-gray-700 rounded-md focus:outline-none focus:border-pink-600 "
                       />
                     </div>
@@ -53,6 +54,7 @@ export default function Contact() {
                         name="email "
                         id=""
                         placeholder="Your Email"
+                        required
                         className="bg-neutral-800 w-full px-4 py-5 text-gray-400 placeholder-gray-400 border border-gray-700 rounded-md focus:outline-none focus:border-pink-600 "
                       />
                     </div>
@@ -62,6 +64,7 @@ export default function Contact() {
                       <textarea
                         name=" Message "
                         id=""
+                        required
                         placeholder="Your Message"
                         className="bg-neutral-800 w-full px-4 py-10 text-gray-400 placeholder-gray-400 border border-gray-700 rounded-md focus:outline-none focus:border-pink-600 "
                       />
