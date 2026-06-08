@@ -2,6 +2,7 @@ export const portfolioData = {
   name: "Rishabh Singh",
   firstName: "Rishabh",
   role: "Frontend Engineer",
+  heroRole: "Frontend Engineer · React · Next.js · TypeScript",
   company: "DevOn",
   location: "India",
   email: "Rishabh797604@gmail.com",
@@ -10,13 +11,12 @@ export const portfolioData = {
   resume:
     "https://drive.google.com/file/d/1mqEx0ezn-O1cfPgvdgPwD5gGXHT5iysO/view?usp=drive_link",
   tagline:
-    "Frontend engineer building performant, accessible web applications with React and Next.js.",
+    "Frontend engineer building performant, accessible web applications with React, Next.js, and TypeScript.",
   highlight: "1st place at Smart Odisha Hackathon 2022",
-  typewriterTexts: [
-    "Frontend Engineer",
-    "React Developer",
-    "Next.js Specialist",
-    "TypeScript Enthusiast",
+  stats: [
+    { value: "2+", label: "Years Exp" },
+    { value: "11+", label: "Technologies" },
+    { value: "🏆", label: "Hackathon Winner" },
   ],
   skillCategories: [
     {
@@ -84,8 +84,22 @@ export const portfolioData = {
       company: "DevOn",
       period: "2024 – Present",
       current: true,
-      description:
-        "Building performant web applications with React and Next.js for enterprise clients.",
+      bullets: [
+        "Build performant, accessible React and Next.js applications for enterprise clients across multiple product domains.",
+        "Develop reusable TypeScript component libraries and shared UI patterns to speed up delivery across squads.",
+        "Partner with designers and backend engineers on API integration, code reviews, and production-ready releases.",
+      ],
+    },
+    {
+      role: "Software Associate",
+      company: "Insors IT Services",
+      period: "Jun 2024 – Mar 2025",
+      current: false,
+      bullets: [
+        "Delivered responsive React interfaces for client-facing web applications in an agile delivery environment.",
+        "Integrated REST APIs and implemented CRUD workflows with TypeScript to improve feature reliability.",
+        "Contributed to sprint planning, peer reviews, and iterative UI improvements from stakeholder feedback.",
+      ],
     },
   ],
   achievements: [

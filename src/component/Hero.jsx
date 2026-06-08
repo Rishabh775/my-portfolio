@@ -1,10 +1,9 @@
 import { motion } from "framer-motion";
 import { portfolioData } from "../data/portfolioData";
-import Typewriter from "./Typewriter";
 
 export default function Hero() {
   return (
-    <section className="section-page" id="HOME">
+    <section className="section-page hero-section" id="HOME">
       <div className="section-inner hero-layout">
         <div className="hero-content">
           <motion.div
@@ -25,14 +24,7 @@ export default function Hero() {
           >
             Hey, I&apos;m {portfolioData.name.split(" ")[0]}
             <br />
-            <span className="primary-color">
-              <Typewriter
-                texts={portfolioData.typewriterTexts}
-                speed={70}
-                deleteSpeed={35}
-                pauseDuration={2200}
-              />
-            </span>
+            <span className="primary-color hero-role">{portfolioData.heroRole}</span>
           </motion.h1>
 
           <motion.p
@@ -68,20 +60,15 @@ export default function Hero() {
             transition={{ delay: 1, duration: 1 }}
             className="hero-stats"
           >
-            <div className="stat-item">
-              <span className="stat-value">3+</span>
-              <span className="stat-label">Projects</span>
-            </div>
-            <div className="stat-divider" />
-            <div className="stat-item">
-              <span className="stat-value">11+</span>
-              <span className="stat-label">Technologies</span>
-            </div>
-            <div className="stat-divider" />
-            <div className="stat-item">
-              <span className="stat-value">🏆</span>
-              <span className="stat-label">Hackathon Winner</span>
-            </div>
+            {portfolioData.stats.map((stat, index) => (
+              <div key={stat.label} className="hero-stat-group">
+                {index > 0 && <div className="stat-divider" />}
+                <div className="stat-item">
+                  <span className="stat-value">{stat.value}</span>
+                  <span className="stat-label">{stat.label}</span>
+                </div>
+              </div>
+            ))}
           </motion.div>
         </div>
 

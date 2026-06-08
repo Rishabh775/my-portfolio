@@ -24,7 +24,7 @@ export default function Experience() {
         <div className="experience-timeline">
           {portfolioData.experiences.map((exp, index) => (
             <motion.div
-              key={exp.company}
+              key={`${exp.company}-${exp.period}`}
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -39,7 +39,11 @@ export default function Experience() {
               <p className="experience-company">
                 {exp.company} · {exp.period}
               </p>
-              <p className="experience-desc">{exp.description}</p>
+              <ul className="experience-bullets">
+                {exp.bullets.map((bullet) => (
+                  <li key={bullet}>{bullet}</li>
+                ))}
+              </ul>
             </motion.div>
           ))}
         </div>

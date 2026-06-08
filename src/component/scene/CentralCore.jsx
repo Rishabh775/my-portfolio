@@ -6,7 +6,7 @@ import { Float, Line, RoundedBox } from "@react-three/drei";
 const CODE_LINES = [
   { width: 1.4, color: "#f97316", y: 0.45 },
   { width: 1.0, color: "#a1a1aa", y: 0.2 },
-  { width: 1.2, color: "#ec4899", y: -0.05 },
+  { width: 1.2, color: "#71717a", y: -0.05 },
   { width: 0.7, color: "#8b5cf6", y: -0.3 },
   { width: 0.9, color: "#a1a1aa", y: -0.55 },
 ];
@@ -258,8 +258,8 @@ export default function CentralCore() {
   });
 
   return (
-    <group ref={groupRef} position={[2.4, 0, -0.5]} scale={0.9}>
-      <Float speed={1.2} rotationIntensity={0.15} floatIntensity={0.3}>
+    <group ref={groupRef} position={[3.6, 0, -1.2]} scale={0.72}>
+      <Float speed={0.8} rotationIntensity={0.08} floatIntensity={0.15}>
         <TerminalWindow />
       </Float>
       <CpuChip />
