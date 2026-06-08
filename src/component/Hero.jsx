@@ -1,101 +1,102 @@
 import { motion } from "framer-motion";
-import { Resume } from "../Constant/ResumeLink";
-import HeroScene from "./HeroScene";
+import { portfolioData } from "../data/portfolioData";
 import Typewriter from "./Typewriter";
 
 export default function Hero() {
-  const sliderVariants = {
-    initial: { x: 0 },
-    animate: {
-      x: "-300%",
-      transition: { repeat: Infinity, repeatType: "mirror", duration: 25 },
-    },
-  };
-
   return (
-    <motion.div
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, scale: 1, y: 0 }}
-      transition={{ type: "spring", stiffness: 40, damping: 20 }}
-      className="relative font-DM Sans h-[105vh] sm:h-[90vh] overflow-clip"
-      id="HOME"
-    >
-      <HeroScene />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0f]/60 via-[#0a0a0f]/80 to-[#0a0a0f] z-[1]" />
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-3 h-[80vh] gap-8 sm:w-5/6 mx-auto">
-        <div className="col-span-1 z-10 my-auto mx-auto">
-          <div className="w-[300px] h-auto xl:w-[400px]">
-            <img src="/hero.webp" alt="hero img" />
-          </div>
-        </div>
-
-        <div className="col-span-2 z-10 px-8 my-auto">
-          <motion.p
-            initial={{ opacity: 0, x: -20 }}
+    <section className="section-page" id="HOME">
+      <div className="section-inner hero-layout">
+        <div className="hero-content">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.3 }}
-            className="text-orange-400 font-semibold mb-3 text-lg"
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="hero-badge"
           >
-            Currently at DevOn
-          </motion.p>
+            <span className="pulse-dot" />
+            Currently at {portfolioData.company}
+          </motion.div>
+
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="text-white leading-normal text-2xl sm:text-3xl xl:text-5xl font-extrabold"
+            transition={{ delay: 0.35, duration: 0.8 }}
+            className="hero-title"
           >
-            Hey, I&apos;m Rishabh Singh
+            Hey, I&apos;m {portfolioData.name.split(" ")[0]}
             <br />
             <span className="primary-color">
               <Typewriter
-                texts={[
-                  "Frontend Engineer",
-                  "React Developer",
-                  "Next.js Specialist",
-                  "TypeScript Enthusiast",
-                ]}
+                texts={portfolioData.typewriterTexts}
                 speed={70}
                 deleteSpeed={35}
                 pauseDuration={2200}
               />
             </span>
           </motion.h1>
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-            className="text-gray-300 sm:text-lg my-6 lg:text-xl"
+            transition={{ delay: 0.5, duration: 0.8 }}
+            className="hero-description"
           >
-            Frontend engineer building performant, accessible web applications
-            with React and Next.js. 1st place at Smart Odisha Hackathon 2022.
+            {portfolioData.tagline} {portfolioData.highlight}.
           </motion.p>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8 }}
-            className="max-sm:flex max-sm:flex-col sm: max-sm:justify-center flex gap-x-4 gap-y-2 sm:items-center"
+            transition={{ delay: 0.65, duration: 0.8 }}
+            className="hero-actions"
           >
-            <a href={Resume.link} target="_blank" rel="noreferrer" data-magnetic>
-              <button className="px-6 py-3 rounded-xl bg-gradient-to-br from-orange-500 to-pink-500 text-white hover:shadow-[0_0_30px_rgba(249,115,22,0.4)] hover:text-lg duration-300 hover:after:content-['➜']" data-magnetic>
-                Resume
+            <a href={portfolioData.resume} target="_blank" rel="noreferrer" data-magnetic>
+              <button className="btn-primary" data-magnetic>
+                View Resume
               </button>
             </a>
             <a href="#CONTACT" data-magnetic>
-              <button className="px-6 py-3 rounded-xl border border-gray-400 hover:bg-gradient-to-br from-orange-500 to-pink-500 text-white hover:border-none hover:shadow-[0_0_30px_rgba(249,115,22,0.3)] hover:text-lg duration-300" data-magnetic>
-                Contact
+              <button className="btn-secondary" data-magnetic>
+                Get in Touch
               </button>
             </a>
           </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1, duration: 1 }}
+            className="hero-stats"
+          >
+            <div className="stat-item">
+              <span className="stat-value">3+</span>
+              <span className="stat-label">Projects</span>
+            </div>
+            <div className="stat-divider" />
+            <div className="stat-item">
+              <span className="stat-value">11+</span>
+              <span className="stat-label">Technologies</span>
+            </div>
+            <div className="stat-divider" />
+            <div className="stat-item">
+              <span className="stat-value">🏆</span>
+              <span className="stat-label">Hackathon Winner</span>
+            </div>
+          </motion.div>
         </div>
-        <motion.div
-          className="slidingTextContainer cursor-default"
-          variants={sliderVariants}
-          initial="initial"
-          animate="animate"
-        >
-          Frontend Engineer
-        </motion.div>
+
+        <div className="hero-spacer" aria-hidden="true" />
       </div>
-    </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.2 }}
+        className="scroll-hint"
+      >
+        <span>Scroll to explore</span>
+        <div className="scroll-line" />
+      </motion.div>
+    </section>
   );
 }

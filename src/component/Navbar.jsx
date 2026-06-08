@@ -1,104 +1,83 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { portfolioData } from "../data/portfolioData";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const MobileMenu = ({ open }) => (
-    <div
-      onClick={() => setOpen(false)}
-      className={`fixed left-0 top-0 w-[60%] z-50 bg-[#0a0a0f]/95 backdrop-blur-xl ease-in-out duration-500 ${
-        open ? "h-full" : "left-[-100%]"
-      }`}
-    >
-      <h1 className="text-3xl m-4">RISHABH SINGH</h1>
-      <div className="flex flex-col items-center pt-40 text-2xl">
-        <ul className="text-center">
-          <li className="py-8 ease-in-out duration-500 hover:scale-110 hover:after:content-['➜']">
-            <a href="#HOME">HOME</a>
-          </li>
-          <li className="py-8 ease-in-out duration-500 hover:scale-110 hover:after:content-['➜']">
-            <a href="#SKILLS">SKILLS</a>
-          </li>
-          <li className="py-8 ease-in-out duration-500 hover:scale-110 hover:after:content-['➜']">
-            <a href="#PROJECTS">PROJECTS</a>
-          </li>
-          <li className="py-8 ease-in-out duration-500 hover:scale-110 hover:after:content-['➜']">
-            <a href="#EXPERIENCE">EXPERIENCE</a>
-          </li>
-          <li className="py-8 ease-in-out duration-500 hover:scale-110 hover:after:content-['➜']">
-            <a href="#CONTACT">CONTACT</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  );
-
-  const toggleMenu = () => {
-    setOpen(!open);
-  };
-
-  MobileMenu.propTypes = {
-    open: PropTypes.bool.isRequired,
-  };
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0f]/80 backdrop-blur-xl border-b border-gray-800/50 text-gray-100 font-DM Sans">
+    <nav className="navbar">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ type: "spring", stiffness: 40, damping: 20 }}
-        className="sm:w-4/6 max-sm:px-4 m-auto h-16 flex items-center justify-between"
+        className="navbar-inner"
       >
-        <div className="text-xl lg:text-2xl font-bold cursor-pointer">
+        <a href="#HOME" className="navbar-logo">
           <span className="primary-color">&lt;</span>
-          RISHABH
+          {portfolioData.firstName.toUpperCase()}
           <span className="primary-color">/&gt;</span>
-        </div>
-        <div className="hidden lg:flex lg:items-center gap-8">
-          <NavItem title="HOME" />
-          <NavItem title="SKILLS" />
-          <NavItem title="PROJECTS" />
-          <NavItem title="EXPERIENCE" />
-          <NavItem title="CONTACT" />
-          <div className="flex flex-wrap gap-3 items-center">
-            <a target="_blank" href="https://github.com/Rishabh775" rel="noreferrer">
-              <img
-                className="w-8 cursor-pointer hover:scale-110 transition-transform"
-                src="/github.png"
-                alt="github"
-              />
+        </a>
+
+        <div className="navbar-links">
+          {portfolioData.navItems.map((item) => (
+            <NavItem key={item} title={item} />
+          ))}
+          <div className="navbar-socials">
+            <a target="_blank" href={portfolioData.github} rel="noreferrer" data-magnetic>
+              <img className="social-icon" src="/github.png" alt="GitHub" />
             </a>
-            <a
-              target="_blank"
-              href="https://www.linkedin.com/in/rishabh-singh-794171205/"
-              rel="noreferrer"
-            >
-              <img
-                className="w-9 cursor-pointer hover:scale-110 transition-transform"
-                src="/linkedin.png"
-                alt="linkedin"
-              />
+            <a target="_blank" href={portfolioData.linkedin} rel="noreferrer" data-magnetic>
+              <img className="social-icon linkedin" src="/linkedin.png" alt="LinkedIn" />
             </a>
           </div>
         </div>
 
-        <div onClick={toggleMenu} className="block lg:hidden">
-          {open ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
-        </div>
+        <button
+          type="button"
+          onClick={() => setOpen(!open)}
+          className="navbar-toggle"
+          aria-label="Toggle menu"
+        >
+          {open ? <AiOutlineClose size={28} /> : <AiOutlineMenu size={28} />}
+        </button>
       </motion.div>
-      <MobileMenu open={open} />
-    </div>
+
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ x: "-100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "-100%" }}
+            transition={{ type: "spring", damping: 28, stiffness: 200 }}
+            className="mobile-menu"
+            onClick={() => setOpen(false)}
+          >
+            <p className="mobile-menu-name">{portfolioData.name}</p>
+            <ul className="mobile-menu-links">
+              {portfolioData.navItems.map((item) => (
+                <li key={item}>
+                  <a href={`#${item}`}>{item}</a>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </nav>
   );
 }
 
-const NavItem = ({ title }) => (
-  <a href={`#${title}`} className="hover:scale-125 duration-200 ease-in-out relative group">
-    <button className="text-sm uppercase tracking-wider">{title}</button>
-    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-500 to-pink-500 group-hover:w-full transition-all duration-300" />
-  </a>
-);
+function NavItem({ title }) {
+  return (
+    <a href={`#${title}`} className="nav-item" data-magnetic>
+      <span>{title}</span>
+      <span className="nav-item-line" />
+    </a>
+  );
+}
 
 NavItem.propTypes = {
   title: PropTypes.string.isRequired,
