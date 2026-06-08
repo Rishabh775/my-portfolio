@@ -8,20 +8,26 @@ export default function Navbar() {
   const MobileMenu = ({ open }) => (
     <div
       onClick={() => setOpen(false)}
-      className={`fixed left-0 top-0 w-[60%] z-50 bg-[#202121] ease-in-out duration-500 ${
+      className={`fixed left-0 top-0 w-[60%] z-50 bg-[#0a0a0f]/95 backdrop-blur-xl ease-in-out duration-500 ${
         open ? "h-full" : "left-[-100%]"
       }`}
     >
-      <h1 className="text-3xl  m-4">RISHABH SINGH</h1>
+      <h1 className="text-3xl m-4">RISHABH SINGH</h1>
       <div className="flex flex-col items-center pt-40 text-2xl">
-        <ul className="text-center   ">
-          <li className="py-8 ease-in-out duration-500  hover:scale-110 hover:after:content-['➜']">
+        <ul className="text-center">
+          <li className="py-8 ease-in-out duration-500 hover:scale-110 hover:after:content-['➜']">
             <a href="#HOME">HOME</a>
           </li>
-          <li className="py-8 ease-in-out duration-500  hover:scale-110 hover:after:content-['➜'] ">
+          <li className="py-8 ease-in-out duration-500 hover:scale-110 hover:after:content-['➜']">
+            <a href="#SKILLS">SKILLS</a>
+          </li>
+          <li className="py-8 ease-in-out duration-500 hover:scale-110 hover:after:content-['➜']">
             <a href="#PROJECTS">PROJECTS</a>
           </li>
-          <li className="py-8 ease-in-out duration-500   hover:scale-110 hover:after:content-['➜'] ">
+          <li className="py-8 ease-in-out duration-500 hover:scale-110 hover:after:content-['➜']">
+            <a href="#EXPERIENCE">EXPERIENCE</a>
+          </li>
+          <li className="py-8 ease-in-out duration-500 hover:scale-110 hover:after:content-['➜']">
             <a href="#CONTACT">CONTACT</a>
           </li>
         </ul>
@@ -38,24 +44,28 @@ export default function Navbar() {
   };
 
   return (
-    <div className="bg-gradient-to-b from-black to-neutral-950 h-24 sm:h-28  text-gray-100 font-DM Sans w-full">
+    <div className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0f]/80 backdrop-blur-xl border-b border-gray-800/50 text-gray-100 font-DM Sans">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ type: "spring", stiffness: 40, damping: 20 }}
-        className="sm:w-4/6 max-sm:px-4 m-auto h-full flex items-center justify-between"
+        className="sm:w-4/6 max-sm:px-4 m-auto h-16 flex items-center justify-between"
       >
-        <div className="  text-xl lg:text-2xl font-bold cursor-pointer">
-          RISHABH SINGH
+        <div className="text-xl lg:text-2xl font-bold cursor-pointer">
+          <span className="primary-color">&lt;</span>
+          RISHABH
+          <span className="primary-color">/&gt;</span>
         </div>
         <div className="hidden lg:flex lg:items-center gap-8">
           <NavItem title="HOME" />
+          <NavItem title="SKILLS" />
           <NavItem title="PROJECTS" />
+          <NavItem title="EXPERIENCE" />
           <NavItem title="CONTACT" />
-          <div className="flex flex-wrap gap-3 items-center ">
-            <a target="_blank" href="https://github.com/Rishabh775">
+          <div className="flex flex-wrap gap-3 items-center">
+            <a target="_blank" href="https://github.com/Rishabh775" rel="noreferrer">
               <img
-                className="w-8 cursor-pointer hover:scale-110"
+                className="w-8 cursor-pointer hover:scale-110 transition-transform"
                 src="/github.png"
                 alt="github"
               />
@@ -63,9 +73,10 @@ export default function Navbar() {
             <a
               target="_blank"
               href="https://www.linkedin.com/in/rishabh-singh-794171205/"
+              rel="noreferrer"
             >
               <img
-                className="w-9  cursor-pointer hover:scale-110"
+                className="w-9 cursor-pointer hover:scale-110 transition-transform"
                 src="/linkedin.png"
                 alt="linkedin"
               />
@@ -83,8 +94,9 @@ export default function Navbar() {
 }
 
 const NavItem = ({ title }) => (
-  <a href={`#${title}`} className="hover:scale-125 duration-200 ease-in-out">
-    <button>{title}</button>
+  <a href={`#${title}`} className="hover:scale-125 duration-200 ease-in-out relative group">
+    <button className="text-sm uppercase tracking-wider">{title}</button>
+    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-500 to-pink-500 group-hover:w-full transition-all duration-300" />
   </a>
 );
 

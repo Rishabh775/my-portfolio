@@ -1,149 +1,95 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+
+const skillCategories = [
+  {
+    title: "Frontend",
+    skills: [
+      { name: "React", color: "#61DAFB" },
+      { name: "Next.js", color: "#ffffff" },
+      { name: "TypeScript", color: "#3178C6" },
+      { name: "JavaScript", color: "#F7DF1E" },
+      { name: "Tailwind CSS", color: "#06B6D4" },
+    ],
+  },
+  {
+    title: "Backend & Database",
+    skills: [
+      { name: "Node.js", color: "#339933" },
+      { name: "Prisma", color: "#2D3748" },
+      { name: "MongoDB", color: "#47A248" },
+    ],
+  },
+  {
+    title: "Tools & AI",
+    skills: [
+      { name: "Git", color: "#F05032" },
+      { name: "Cursor", color: "#A855F7" },
+      { name: "GitHub Copilot", color: "#6E40C9" },
+    ],
+  },
+];
 
 export default function Skills() {
-  const sliderVariants = {
-    initial: {
-      x: 0,
-    },
-    animate: {
-      x: ["0%", "-101.5%"],
-      transition: {
-        repeat: Infinity,
-        duration: 30,
-        ease: "linear",
-      },
-    },
-  };
-
-  const negativeSliderVariants = {
-    initial: {
-      x: 0,
-    },
-    animate: {
-      x: ["-101.5%", "0%"], // Adjusted to move to the lower right side
-      transition: {
-        repeat: Infinity,
-        duration: 28,
-        ease: "linear",
-      },
-    },
-  };
-
-  const skills = [
-    { name: "C++", img: "c-.png" },
-    { name: "HTML", img: "html-5.png" },
-    { name: "CSS", img: "css.webp" },
-    { name: "JAVASCRIPT", img: "js.webp" },
-    { name: "TYPESCRIPT", img: "typescript.png" },
-    { name: "REACT", img: "React.webp" },
-    { name: "NEXT", img: "next.jpg" },
-    { name: "PRISMA", img: "prisma.svg" },
-    { name: "MONGODB", img: "mongo.webp" },
-  ];
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <div className="bg-gradient-to-b from-[#111132] to-[#0c0c1d] text-white font-bold font-sans">
-      <div className="h-[100vh] hidden overflow-hidden sm:flex flex-col items-center justify-center my-auto">
-        <div className="py-10 marquee sm:flex xl:w-5/6 md:w-full mx-auto whitespace-nowrap gap-x-10">
-          <div>
+    <section className="bg-[#0a0a0f] py-24 relative" id="SKILLS">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(139,92,246,0.05)_0%,transparent_60%)]" />
+      <div className="max-w-5xl mx-auto px-6 relative z-10" ref={ref}>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 text-center">
+            My <span className="primary-color">Tech Stack</span>
+          </h2>
+          <p className="text-gray-500 text-center mb-12 text-lg">
+            Technologies I work with daily
+          </p>
+        </motion.div>
+        <div className="space-y-10 text-center">
+          {skillCategories.map((category, catIndex) => (
             <motion.div
-              className="inline-block"
-              variants={sliderVariants}
-              initial="initial"
-              animate="animate"
+              key={category.title}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: catIndex * 0.2 }}
             >
-              <div className="flex gap-x-10">
-                {skills.map((skill, index) => (
-                  <div
-                    key={index}
-                    className="flex gap-4 items-center justify-start hover:shadow-indigo-950 hover:scale-105  shadow-md bg-gray-800 rounded-3xl py-4 w-64 px-6"
+              <h3 className="text-gray-400 text-sm font-semibold uppercase tracking-wider mb-5">
+                {category.title}
+              </h3>
+              <div className="flex flex-wrap gap-4 justify-center">
+                {category.skills.map((skill, skillIndex) => (
+                  <motion.div
+                    key={skill.name}
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                    transition={{
+                      delay: catIndex * 0.2 + skillIndex * 0.08,
+                      type: "spring",
+                      stiffness: 200,
+                    }}
                   >
-                    <img className="size-16" src={skill.img} alt={skill.name} />
-                    <span className="text-xl">{skill.name}</span>
-                  </div>
+                    <span
+                      className="px-5 py-2.5 bg-gray-900/60 backdrop-blur-sm border border-gray-700/50 text-white rounded-full text-sm hover:border-orange-500/50 hover:shadow-[0_0_20px_rgba(249,115,22,0.15)] transition-all duration-300 inline-block cursor-default"
+                      style={{
+                        // subtle glow on hover via inline style for the accent color
+                        "--glow-color": skill.color,
+                      }}
+                    >
+                      <span className="inline-block w-2 h-2 rounded-full mr-2" style={{ backgroundColor: skill.color }} />
+                      {skill.name}
+                    </span>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
-          </div>
-
-          <motion.div
-            className="inline-block"
-            variants={sliderVariants}
-            initial="initial"
-            animate="animate"
-          >
-            <div className="flex gap-x-10">
-              {skills.map((skill, index) => (
-                <div
-                  key={index}
-                  className="flex gap-4 justify-start items-center hover:shadow-indigo-950 hover:scale-105  shadow-md bg-gray-800 rounded-3xl py-4 w-64 px-6"
-                >
-                  <img className="size-16" src={skill.img} alt={skill.name} />
-                  <span className="text-xl">{skill.name}</span>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-
-        <div className="py-10 marquee sm:flex xl:w-5/6 md:w-full mx-auto whitespace-nowrap gap-x-10">
-          <div>
-            <motion.div
-              className="inline-block"
-              variants={negativeSliderVariants}
-              initial="initial"
-              animate="animate"
-            >
-              <div className="flex gap-x-10">
-                {skills.map((skill, index) => (
-                  <div
-                    key={index}
-                    className="flex gap-4 items-center justify-start hover:shadow-indigo-950 hover:scale-105  shadow-md bg-gray-800 rounded-3xl py-4 w-64 px-6"
-                  >
-                    <img className="size-16" src={skill.img} alt={skill.name} />
-                    <span className="text-xl">{skill.name}</span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-
-          <motion.div
-            className="inline-block"
-            variants={negativeSliderVariants}
-            initial="initial"
-            animate="animate"
-          >
-            <div className="flex gap-x-10">
-              {skills.map((skill, index) => (
-                <div
-                  key={index}
-                  className="flex gap-4 justify-start items-center hover:shadow-indigo-950 hover:scale-105  shadow-md bg-gray-800 rounded-3xl py-4 w-64 px-6"
-                >
-                  <img className="size-16" src={skill.img} alt={skill.name} />
-                  <span className="text-xl">{skill.name}</span>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </div>
-
-      <div className="h-[110vh] sm:hidden flex flex-col items-center justify-center">
-        {/* <h1 className="primary-color text-5xl pb-10">Skills</h1> */}
-
-        <div className="py-4 flex flex-wrap items-center gap-4 justify-evenly">
-          {skills.map((skill, index) => (
-            <label
-              key={index}
-              className="flex gap-4 items-center hover:shadow-indigo-950 shadow-md bg-gray-800 rounded-full px-8 py-2"
-            >
-              <img className="size-10" src={skill.img} alt={skill.name} />
-              <span>{skill.name}</span>
-            </label>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

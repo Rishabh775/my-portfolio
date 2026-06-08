@@ -1,34 +1,38 @@
-import { FaArrowDownLong } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { useRef } from "react";
+
 export default function Contact() {
   const constraintsRef = useRef(null);
   return (
     <motion.div
       ref={constraintsRef}
-      className="bg-gradient-to-b from-[#0c0c1d] h-[80vh] to-black"
+      className="bg-[#0a0a0f] py-24 relative"
       id="CONTACT"
     >
-      <div className=" hidden sm:block text-white text-xl font-medium cursor-default">
-        <div className=" flex flex-col justify-center items-center ">
-          Drag Me{" "}
-          <FaArrowDownLong className="animate-bounce my-2 sm:scale-110" />
-        </div>
-      </div>
-
-      <div className=" sm:w-5/6 mx-auto sm:py-20  p-5 font-sans">
-        <div className=" md:w-3/6  mx-auto">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(236,72,153,0.05)_0%,transparent_60%)]" />
+      <div className="max-w-5xl mx-auto px-6 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 text-center">
+            Contact <span className="primary-color">Me</span>
+          </h2>
+          <p className="text-gray-500 text-center mb-12 text-lg">
+            Let&apos;s build something together
+          </p>
+        </motion.div>
+        <div className="md:w-3/6 mx-auto">
           <motion.div
             drag
             dragConstraints={constraintsRef}
-            className="mt-6  bg-neutral-900 rounded-xl"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="bg-gray-900/60 backdrop-blur-sm border border-gray-800 rounded-2xl hover:border-orange-500/20 transition-all duration-500"
           >
-            <div className="text-center">
-              <h2 className="text-4xl font-bold pt-5 leading-tight primary-color">
-                Contact Me
-              </h2>
-            </div>
-            <div className="p-10">
+            <div className="p-8">
               <form
                 action="https://getform.io/f/kazRmOaJ"
                 target="_blank"
@@ -36,44 +40,35 @@ export default function Contact() {
               >
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-4">
                   <div>
-                    <div className="mt-2.5 ">
-                      <input
-                        type="text "
-                        name="name "
-                        id=""
-                        placeholder="Your Name"
-                        required
-                        className="bg-neutral-800 w-full px-4 py-5 text-gray-400 placeholder-gray-400 border border-gray-700 rounded-md focus:outline-none focus:border-pink-600 "
-                      />
-                    </div>
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Your Name"
+                      required
+                      className="bg-neutral-800/80 w-full px-4 py-4 text-gray-400 placeholder-gray-500 border border-gray-700/50 rounded-md focus:outline-none focus:border-orange-500 focus:shadow-[0_0_15px_rgba(249,115,22,0.15)] transition-all duration-300"
+                    />
                   </div>
                   <div>
-                    <div className="mt-2.5 ">
-                      <input
-                        type="email "
-                        name="email "
-                        id=""
-                        placeholder="Your Email"
-                        required
-                        className="bg-neutral-800 w-full px-4 py-5 text-gray-400 placeholder-gray-400 border border-gray-700 rounded-md focus:outline-none focus:border-pink-600 "
-                      />
-                    </div>
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Your Email"
+                      required
+                      className="bg-neutral-800/80 w-full px-4 py-4 text-gray-400 placeholder-gray-500 border border-gray-700/50 rounded-md focus:outline-none focus:border-orange-500 focus:shadow-[0_0_15px_rgba(249,115,22,0.15)] transition-all duration-300"
+                    />
                   </div>
                   <div className="sm:col-span-2">
-                    <div className="mt-2.5 ">
-                      <textarea
-                        name=" Message "
-                        id=""
-                        required
-                        placeholder="Your Message"
-                        className="bg-neutral-800 w-full px-4 py-10 text-gray-400 placeholder-gray-400 border border-gray-700 rounded-md focus:outline-none focus:border-pink-600 "
-                      />
-                    </div>
+                    <textarea
+                      name="message"
+                      required
+                      placeholder="Your Message"
+                      className="bg-neutral-800/80 w-full px-4 py-8 text-gray-400 placeholder-gray-500 border border-gray-700/50 rounded-md focus:outline-none focus:border-orange-500 focus:shadow-[0_0_15px_rgba(249,115,22,0.15)] transition-all duration-300"
+                    />
                   </div>
-                  <div className="sm:col-span-2 ">
+                  <div className="sm:col-span-2">
                     <button
                       type="submit"
-                      className="text-xl bg-gradient-to-br from-orange-400 to-pink-600 w-full mx-auto  p-4  mt-2 font-semibold text-white  rounded-md"
+                      className="text-lg bg-gradient-to-br from-orange-400 to-pink-600 w-full p-4 font-semibold text-white rounded-md hover:shadow-[0_0_30px_rgba(249,115,22,0.4)] hover:scale-[1.02] transition-all duration-300"
                     >
                       Send
                     </button>
