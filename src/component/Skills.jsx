@@ -17,7 +17,7 @@ export default function Skills() {
             Skills in <span className="primary-color">Orbit</span>
           </h2>
           <p className="section-subtitle">
-            Technologies I work with daily as a frontend engineer
+            Frontend-first with full-stack and AI tooling I use in production
           </p>
         </motion.div>
 

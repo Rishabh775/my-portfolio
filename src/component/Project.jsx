@@ -34,7 +34,7 @@ export default function Project() {
             Featured <span className="primary-color">Projects</span>
           </h2>
           <p className="section-subtitle">
-            Real products built with React, Next.js, and modern tooling
+            Production apps, AI experiments, and full-stack builds
           </p>
         </motion.div>
 
@@ -68,17 +68,23 @@ export default function Project() {
                     </span>
                   ))}
                 </div>
-                {project.live && (
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="project-link"
-                    data-magnetic
-                  >
-                    Visit Live <span>&rarr;</span>
-                  </a>
-                )}
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="project-link"
+                  data-magnetic
+                >
+                  {project.live ? (
+                    <>
+                      Visit Live <span>&rarr;</span>
+                    </>
+                  ) : (
+                    <>
+                      View Code <span>&rarr;</span>
+                    </>
+                  )}
+                </a>
               </div>
             </motion.article>
           ))}
