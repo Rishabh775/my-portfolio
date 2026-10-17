@@ -1,0 +1,172 @@
+{
+  "basics": {
+    "name": "Rishabh Singh",
+    "label": "Frontend Engineer",
+    "email": "rishabh797604@gmail.com",
+    "phone": "+91 8827761206",
+    "location": "Bengaluru, India",
+    "url": "https://my-portfolio-nine-eta-41.vercel.app/",
+    "summary": "Frontend engineer building performant, accessible web applications with React, Next.js, TypeScript, and AI integrations.",
+    "profiles": [
+      {
+        "network": "GitHub",
+        "url": "https://github.com/Rishabh775"
+      },
+      {
+        "network": "LinkedIn",
+        "url": "https://www.linkedin.com/in/rishabh-singh-794171205/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "position": "Frontend Engineer",
+      "company": "emagine (formerly DevOn)",
+      "startDate": "Apr 2025",
+      "highlights": [
+        "Develop and maintain frontend capabilities for a scholarly publishing platform using React, TypeScript, Recoil, and GraphQL within a Yarn Workspaces monorepo, delivering reusable UI on the Graphene design system.",
+        "Engineered an AI-assisted incident-clustering application using Sentence Transformers, HDBSCAN, Gemini 2.0 Flash, FastAPI, and React/TypeScript — placed Top 4 of 25 in DevOn's innovation programme and currently under evaluation for production adoption.",
+        "Diagnosed production defects across frontend, GraphQL, and database layers, implementing GraphQL resolvers and SQL fixes when root causes extended beyond the UI.",
+        "Converted Figma specifications into WCAG-compliant, reusable design-system components; automated critical user journeys with Jest, Playwright, and Cucumber BDD — raising test coverage to 85% and cutting QA triage time by 35%.",
+        "Recognized with the Promising Fresher Award (2025) for delivering production-level features independently within the first months of joining."
+      ],
+      "location": "Bengaluru, India"
+    },
+    {
+      "position": "Frontend Developer",
+      "company": "i2Campus (Insors IT Solutions)",
+      "startDate": "Mar 2024",
+      "endDate": "Feb 2025",
+      "highlights": [
+        "Sole frontend and mobile engineer on a 3-person team — built the i2Campus School Management System end-to-end across web (React) and mobile (React Native + Expo).",
+        "Delivered 5 permission-based dashboards for Student, Teacher, Parent, Admin, and Principal actors, covering attendance, fee management, assignments, scheduling, and announcements.",
+        "Established a reusable Tailwind CSS component library and Redux Toolkit + RTK Query data layer, standardizing UI implementation and type-safe API consumption across web and mobile."
+      ],
+      "location": "Bhilai, India"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Rungta College of Engineering & Technology",
+      "area": "Bachelor of Technology, Computer Science & Engineering",
+      "startDate": "2020",
+      "endDate": "2024",
+      "score": "CGPA: 8.2 / 10"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Frontend",
+      "keywords": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "JavaScript",
+        "React Native",
+        "Tailwind CSS",
+        "Redux Toolkit",
+        "RTK Query",
+        "Recoil",
+        "Material UI",
+        "HTML5",
+        "CSS3"
+      ]
+    },
+    {
+      "name": "Backend & Database",
+      "keywords": [
+        "Node.js",
+        "Express.js",
+        "FastAPI",
+        "GraphQL",
+        "REST APIs",
+        "PostgreSQL",
+        "MongoDB",
+        "Prisma",
+        "SQL",
+        "Python"
+      ]
+    },
+    {
+      "name": "Testing, Tools & AI",
+      "keywords": [
+        "Jest",
+        "Playwright",
+        "Cucumber",
+        "Git",
+        "GitHub Actions",
+        "Vercel",
+        "Figma",
+        "Yarn Workspaces",
+        "Gemini",
+        "HDBSCAN"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "AI Incident Clustering",
+      "description": "AI-assisted incident clustering app using Sentence Transformers, HDBSCAN, and Gemini 2.0 Flash for semantic grouping and LLM classification — placed Top 4 of 25 teams at DevOn's innovation programme.",
+      "keywords": [
+        "React",
+        "TypeScript",
+        "FastAPI",
+        "Sentence Transformers",
+        "HDBSCAN",
+        "Gemini"
+      ],
+      "url": "https://github.com/Rishabh775"
+    },
+    {
+      "name": "Optimus Assistant",
+      "description": "Local-first voice AI assistant with hybrid Ollama + cloud routing, faster-whisper STT, edge-tts, a custom openWakeWord wake word, 23 tools (shell, browser, email, calendar, Home Assistant), and persistent Chroma memory — with sandboxed, confirmation-gated execution.",
+      "keywords": [
+        "Python",
+        "Ollama",
+        "Faster-Whisper",
+        "OpenWakeWord",
+        "edge-tts",
+        "ChromaDB"
+      ],
+      "url": "https://github.com/Rishabh775/optimus-assistant"
+    },
+    {
+      "name": "Oxyzon",
+      "description": "Full-stack e-commerce platform with product catalog, cart, server-side pagination, user profiles, GitHub OAuth, and a Prisma/MongoDB data-access layer.",
+      "keywords": [
+        "Next.js",
+        "TypeScript",
+        "Prisma",
+        "MongoDB",
+        "NextAuth"
+      ],
+      "url": "https://next-js-ecommerce-omega.vercel.app/"
+    },
+    {
+      "name": "Loop",
+      "description": "Music streaming and cloud storage app with uploads, playlists, and offline listening; engineered a reusable useAudio hook coordinating playback state and queue transitions.",
+      "keywords": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Axios",
+        "Node.js"
+      ],
+      "url": "https://loop-sepia.vercel.app/"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Top 14 of 2,400+ Teams"
+    },
+    {
+      "title": "Top 4 of 25 Teams"
+    },
+    {
+      "title": "Promising Fresher Award"
+    },
+    {
+      "title": "1st Place"
+    }
+  ]
+}

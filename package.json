@@ -9,6 +9,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "prebuild": "node scripts/generate-meta.mjs",
+    "generate:meta": "node scripts/generate-meta.mjs",
+    "mcp": "node mcp/server.mjs",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
