@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { portfolioData } from "../data/portfolioData";
+import { scrollController } from "./scrollController";
 
 export default function Hero() {
   return (
@@ -42,15 +43,25 @@ export default function Hero() {
             transition={{ delay: 0.65, duration: 0.8 }}
             className="hero-actions"
           >
-            <a href={portfolioData.resume} target="_blank" rel="noreferrer" data-magnetic>
-              <button className="btn-primary" data-magnetic>
-                View Resume
-              </button>
+            <a
+              href={portfolioData.resume}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-primary"
+              data-magnetic
+            >
+              View Resume
             </a>
-            <a href="#CONTACT" data-magnetic>
-              <button className="btn-secondary" data-magnetic>
-                Get in Touch
-              </button>
+            <a
+              href="#CONTACT"
+              className="btn-secondary"
+              data-magnetic
+              onClick={(e) => {
+                e.preventDefault();
+                scrollController.scrollToSection(4);
+              }}
+            >
+              Get in Touch
             </a>
           </motion.div>
 

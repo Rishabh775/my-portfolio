@@ -65,7 +65,7 @@ export function BackgroundStars() {
     <Stars
       radius={80}
       depth={60}
-      count={3000}
+      count={1500}
       factor={3}
       saturation={0.2}
       fade
@@ -77,18 +77,10 @@ export function BackgroundStars() {
 export function SceneLights() {
   return (
     <>
-      <ambientLight intensity={0.25} />
+      <ambientLight intensity={0.35} />
       <directionalLight position={[8, 8, 5]} intensity={1.2} color="#f97316" />
       <directionalLight position={[-6, -4, 4]} intensity={0.6} color="#ec4899" />
       <pointLight position={[0, 2, 4]} intensity={1} color="#f97316" />
-      <pointLight position={[-4, -2, 2]} intensity={0.5} color="#8b5cf6" />
-      <spotLight
-        position={[0, 10, 0]}
-        angle={0.35}
-        penumbra={1}
-        intensity={0.8}
-        color="#ffffff"
-      />
     </>
   );
 }

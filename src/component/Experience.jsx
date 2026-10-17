@@ -1,5 +1,13 @@
 import { motion } from "framer-motion";
+import { FaTrophy, FaRocket, FaStar, FaMedal, FaAward, FaGraduationCap } from "react-icons/fa";
 import { portfolioData } from "../data/portfolioData";
+
+const ACHIEVEMENT_ICONS = {
+  trophy: FaTrophy,
+  rocket: FaRocket,
+  star: FaStar,
+  medal: FaMedal,
+};
 
 export default function Experience() {
   return (
@@ -57,18 +65,65 @@ export default function Experience() {
         >
           <h3 className="achievements-label">Achievements</h3>
           <div className="achievements-grid">
-            {portfolioData.achievements.map((achievement, index) => (
-              <motion.span
-                key={achievement.title}
-                initial={{ opacity: 0, scale: 0.85 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+            {portfolioData.achievements.map((achievement, index) => {
+              const Icon = ACHIEVEMENT_ICONS[achievement.icon] || FaAward;
+              return (
+                <motion.article
+                  key={achievement.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  className="glass-card achievement-card"
+                >
+                  <div className="achievement-top">
+                    <span className="achievement-badge">
+                      <Icon />
+                    </span>
+                    <span className="achievement-rank">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+                  <h4 className="achievement-title">{achievement.title}</h4>
+                  <p className="achievement-org">{achievement.org}</p>
+                  <span className="achievement-year">{achievement.year}</span>
+                </motion.article>
+              );
+            })}
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="education-section"
+        >
+          <h3 className="achievements-label">Education</h3>
+          <div className="education-grid">
+            {portfolioData.education.map((edu, index) => (
+              <motion.article
+                key={edu.school}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1, type: "spring" }}
-                className="achievement-pill"
+                transition={{ delay: index * 0.1, duration: 0.6 }}
+                className="glass-card education-card"
               >
-                <span className="achievement-icon">{achievement.icon}</span>
-                {achievement.title}
-              </motion.span>
+                <span className="education-marker">
+                  <FaGraduationCap />
+                </span>
+                <div className="education-body">
+                  <h4 className="education-degree">{edu.degree}</h4>
+                  <p className="education-school">{edu.school}</p>
+                  <div className="education-meta">
+                    <span>{edu.period}</span>
+                    <span className="education-sep" />
+                    <span className="education-detail">{edu.detail}</span>
+                  </div>
+                </div>
+              </motion.article>
             ))}
           </div>
         </motion.div>

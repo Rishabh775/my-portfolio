@@ -1,22 +1,23 @@
 export const portfolioData = {
   name: "Rishabh Singh",
   firstName: "Rishabh",
-  role: "Full Stack Engineer",
+  role: "Frontend Engineer",
   heroRole: "Frontend Engineer · React · Next.js · TypeScript · AI",
-  company: "DevOn",
-  location: "India",
-  email: "Rishabh797604@gmail.com",
+  company: "emagine",
+  location: "Bengaluru, India",
+  email: "rishabh797604@gmail.com",
+  phone: "+91 8827761206",
   github: "https://github.com/Rishabh775",
   linkedin: "https://www.linkedin.com/in/rishabh-singh-794171205/",
   resume:
-    "https://drive.google.com/file/d/1mqEx0ezn-O1cfPgvdgPwD5gGXHT5iysO/view?usp=drive_link",
+    "https://drive.google.com/drive/folders/1MOHGzHj0X-O1DHw0XfAx87X6Bt5HFnmk",
   tagline:
-    "Full stack engineer building performant, accessible web applications with React, Next.js, TypeScript, and AI integrations.",
-  highlight: "Top 4 in DevOn's company-wide AI Innovation Programme",
+    "Frontend engineer building performant, accessible web applications with React, Next.js, TypeScript, and AI integrations.",
+  highlight: "Top 14 of 2,400+ teams in India's Agentic AI Open Hackathon",
   stats: [
     { value: "2+", label: "Years Exp" },
-    { value: "15+", label: "Technologies" },
-    { value: "🏆", label: "Hackathon Winner" },
+    { value: "24+", label: "Technologies" },
+    { value: "1st", label: "Hackathon Winner" },
   ],
   skillCategories: [
     {
@@ -29,6 +30,11 @@ export const portfolioData = {
         { name: "React Native", color: "#61DAFB" },
         { name: "Tailwind CSS", color: "#06B6D4" },
         { name: "Redux Toolkit", color: "#764ABC" },
+        { name: "RTK Query", color: "#764ABC" },
+        { name: "Recoil", color: "#3578E5" },
+        { name: "Material UI", color: "#007FFF" },
+        { name: "HTML5", color: "#E34F26" },
+        { name: "CSS3", color: "#1572B6" },
       ],
     },
     {
@@ -43,6 +49,7 @@ export const portfolioData = {
         { name: "MongoDB", color: "#47A248" },
         { name: "Prisma", color: "#2D3748" },
         { name: "SQL", color: "#F29111" },
+        { name: "Python", color: "#3776AB" },
       ],
     },
     {
@@ -50,10 +57,12 @@ export const portfolioData = {
       skills: [
         { name: "Jest", color: "#C21325" },
         { name: "Playwright", color: "#2EAD33" },
+        { name: "Cucumber", color: "#23D96C" },
         { name: "Git", color: "#F05032" },
         { name: "GitHub Actions", color: "#2088FF" },
         { name: "Vercel", color: "#000000" },
         { name: "Figma", color: "#F24E1E" },
+        { name: "Yarn Workspaces", color: "#2C8EBB" },
         { name: "Gemini", color: "#4285F4" },
         { name: "HDBSCAN", color: "#1DB954" },
       ],
@@ -69,6 +78,16 @@ export const portfolioData = {
       tech: ["React", "TypeScript", "FastAPI", "Sentence Transformers", "HDBSCAN", "Gemini"],
       live: false,
       accent: "#10b981",
+    },
+    {
+      image: "/optimus.svg",
+      name: "Optimus Assistant",
+      url: "https://github.com/Rishabh775/optimus-assistant",
+      description:
+        "Local-first voice AI assistant with hybrid Ollama + cloud routing, faster-whisper STT, edge-tts, a custom openWakeWord wake word, 23 tools (shell, browser, email, calendar, Home Assistant), and persistent Chroma memory — with sandboxed, confirmation-gated execution.",
+      tech: ["Python", "Ollama", "Faster-Whisper", "OpenWakeWord", "edge-tts", "ChromaDB"],
+      live: false,
+      accent: "#38bdf8",
     },
     {
       image: "/oxyzon.png",
@@ -90,28 +109,19 @@ export const portfolioData = {
       live: true,
       accent: "#ec4899",
     },
-    {
-      image: "/visitto.png",
-      name: "Visitto",
-      url: "https://visitto.netlify.app/",
-      description:
-        "Landing page for a travel agency with immersive scroll experiences.",
-      tech: ["HTML", "CSS", "JavaScript"],
-      live: true,
-      accent: "#8b5cf6",
-    },
   ],
   experiences: [
     {
       role: "Frontend Engineer",
-      company: "DevOn",
+      company: "emagine (formerly DevOn)",
       period: "Apr 2025 – Present",
+      location: "Bengaluru, India",
       current: true,
       bullets: [
-        "Develop and maintain frontend capabilities for a scholarly publishing platform using React, TypeScript, Recoil, and GraphQL within a Yarn Workspaces monorepo.",
-        "Engineered an AI-assisted incident-clustering application using Sentence Transformers, HDBSCAN, Gemini 2.0 Flash, FastAPI, and React/TypeScript — placed top 4 of 25 in DevOn's innovation programme.",
+        "Develop and maintain frontend capabilities for a scholarly publishing platform using React, TypeScript, Recoil, and GraphQL within a Yarn Workspaces monorepo, delivering reusable UI on the Graphene design system.",
+        "Engineered an AI-assisted incident-clustering application using Sentence Transformers, HDBSCAN, Gemini 2.0 Flash, FastAPI, and React/TypeScript — placed Top 4 of 25 in DevOn's innovation programme and currently under evaluation for production adoption.",
         "Diagnosed production defects across frontend, GraphQL, and database layers, implementing GraphQL resolvers and SQL fixes when root causes extended beyond the UI.",
-        "Converted Figma specifications into WCAG-compliant, reusable design-system components; automated critical user journeys with Jest, Playwright, and Cucumber BDD test suites.",
+        "Converted Figma specifications into WCAG-compliant, reusable design-system components; automated critical user journeys with Jest, Playwright, and Cucumber BDD — raising test coverage to 85% and cutting QA triage time by 35%.",
         "Recognized with the Promising Fresher Award (2025) for delivering production-level features independently within the first months of joining.",
       ],
     },
@@ -119,6 +129,7 @@ export const portfolioData = {
       role: "Frontend Developer",
       company: "i2Campus (Insors IT Solutions)",
       period: "Mar 2024 – Feb 2025",
+      location: "Bhilai, India",
       current: false,
       bullets: [
         "Sole frontend and mobile engineer on a 3-person team — built the i2Campus School Management System end-to-end across web (React) and mobile (React Native + Expo).",
@@ -127,11 +138,39 @@ export const portfolioData = {
       ],
     },
   ],
+  education: [
+    {
+      degree: "Bachelor of Technology, Computer Science & Engineering",
+      school: "Rungta College of Engineering & Technology",
+      period: "2020 – 2024",
+      detail: "CGPA: 8.2 / 10",
+    },
+  ],
   achievements: [
-    { title: "Top 4 of 25 — DevOn Innovation Programme 2025", icon: "🚀" },
-    { title: "Promising Fresher Award 2025", icon: "⭐" },
-    { title: "1st Place — Smart Odisha Hackathon 2022", icon: "🏆" },
-    { title: "Top 7 Finalist — HackaversuMM 2022", icon: "🎖️" },
+    {
+      title: "Top 14 of 2,400+ Teams",
+      org: "India Agentic AI Open Hackathon · NVIDIA",
+      year: "2026",
+      icon: "trophy",
+    },
+    {
+      title: "Top 4 of 25 Teams",
+      org: "DevOn Innovation Programme",
+      year: "2025",
+      icon: "rocket",
+    },
+    {
+      title: "Promising Fresher Award",
+      org: "DevOn Software Services",
+      year: "2025",
+      icon: "star",
+    },
+    {
+      title: "1st Place",
+      org: "Smart Odisha Hackathon",
+      year: "2022",
+      icon: "medal",
+    },
   ],
   navItems: ["HOME", "SKILLS", "PROJECTS", "EXPERIENCE", "CONTACT"],
 };

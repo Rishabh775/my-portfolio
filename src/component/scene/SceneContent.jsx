@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unknown-property */
-import { useThree } from "@react-three/fiber";
-import { Environment } from "@react-three/drei";
+import { useRef } from "react";
+import { useFrame } from "@react-three/fiber";
+import { Environment, useScroll } from "@react-three/drei";
 import {
   ParticleField,
   FloorGrid,
@@ -12,17 +13,28 @@ import SkillOrbit from "./SkillOrbit";
 import ProjectNodes from "./ProjectNodes";
 import ExperienceNodes from "./ExperienceNodes";
 import ContactPortal from "./ContactPortal";
+import { scrollOffsetsRef } from "../scrollOffsetsRef";
 
 export default function SceneContent() {
-  const viewport = useThree((state) => state.viewport);
+  const scroll = useScroll();
+  const groupRefs = useRef([]);
 
-  const pages = [
-    { y: 0, content: <CentralCore /> },
-    { y: -viewport.height, content: <SkillOrbit /> },
-    { y: -viewport.height * 2, content: <ProjectNodes /> },
-    { y: -viewport.height * 3, content: <ExperienceNodes /> },
-    { y: -viewport.height * 4, content: <ContactPortal /> },
+  const sections = [
+    <CentralCore key="core" />,
+    <SkillOrbit key="skills" />,
+    <ProjectNodes key="projects" />,
+    <ExperienceNodes key="experience" />,
+    <ContactPortal key="contact" />,
   ];
+
+  useFrame((state) => {
+    const total = scroll?.pages ?? 6;
+    const span = state.viewport.height * (total - 1);
+    const offsets = scrollOffsetsRef.current;
+    groupRefs.current.forEach((group, i) => {
+      if (group) group.position.y = -span * (offsets[i] ?? 0);
+    });
+  });
 
   return (
     <>
@@ -31,12 +43,17 @@ export default function SceneContent() {
       <SceneLights />
       <Environment preset="night" />
       <BackgroundStars />
-      <ParticleField count={600} />
+      <ParticleField count={350} />
       <FloorGrid />
 
-      {pages.map((page, i) => (
-        <group key={i} position={[0, page.y, 0]}>
-          {page.content}
+      {sections.map((content, i) => (
+        <group
+          key={i}
+          ref={(el) => {
+            groupRefs.current[i] = el;
+          }}
+        >
+          {content}
         </group>
       ))}
     </>
