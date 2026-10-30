@@ -77,6 +77,44 @@ export default function PortfolioExperience() {
   }, []);
 
   useEffect(() => {
+    const onKeyDown = (e) => {
+      const el = scrollController.el;
+      if (!el || scrollController.maxScroll() <= 0) return;
+      const t = e.target;
+      if (
+        t instanceof HTMLElement &&
+        (t.matches("input, textarea, select") || t.isContentEditable)
+      ) {
+        return;
+      }
+
+      const page = scrollController.pageDelta();
+      let delta = null;
+      if (e.key === "PageDown" || (e.key === " " && e.code === "Space" && !e.shiftKey)) {
+        delta = page;
+      } else if (e.key === "PageUp" || (e.key === " " && e.code === "Space" && e.shiftKey)) {
+        delta = -page;
+      } else if (e.key === "ArrowDown") {
+        delta = 96;
+      } else if (e.key === "ArrowUp") {
+        delta = -96;
+      } else if (e.key === "Home") {
+        delta = -scrollController.maxScroll();
+      } else if (e.key === "End") {
+        delta = scrollController.maxScroll();
+      } else {
+        return;
+      }
+
+      e.preventDefault();
+      scrollController.smoothScrollBy(delta);
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, []);
+
+  useEffect(() => {
     const onVisibility = () => {
       setFrameloop(document.hidden ? "never" : "always");
     };

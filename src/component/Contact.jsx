@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { portfolioData } from "../data/portfolioData";
 
 export default function Contact() {
@@ -65,11 +66,23 @@ export default function Contact() {
               {portfolioData.phone}
             </a>
             <div className="contact-socials">
-              <a href={portfolioData.github} target="_blank" rel="noreferrer">
-                GitHub
+              <a
+                href={portfolioData.github}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub profile"
+              >
+                <FaGithub aria-hidden="true" />
+                <span>GitHub</span>
               </a>
-              <a href={portfolioData.linkedin} target="_blank" rel="noreferrer">
-                LinkedIn
+              <a
+                href={portfolioData.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn profile"
+              >
+                <FaLinkedinIn aria-hidden="true" />
+                <span>LinkedIn</span>
               </a>
             </div>
           </motion.div>

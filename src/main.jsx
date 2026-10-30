@@ -8,3 +8,13 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <App />
   </React.StrictMode>,
 )
+
+requestAnimationFrame(() =>
+  requestAnimationFrame(() => {
+    const boot = document.getElementById('boot')
+    if (boot) {
+      boot.classList.add('boot-hidden')
+      window.setTimeout(() => boot.remove(), 900)
+    }
+  }),
+)
